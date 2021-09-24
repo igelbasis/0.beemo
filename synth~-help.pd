@@ -115,7 +115,7 @@ faders].......table (0..1) \; [thick fader]....smooth steps (0..4800s)
 #X restore 37 363 pd MOD_SEQUENCER;
 #X text 520 459 [p1.....p5];
 #X text 600 460 [presets];
-#X text 822 369 [other settings];
+#X text 822 374 [other settings];
 #X text 381 461 [mod_sequencer];
 #X text 685 459 [mod_sequencer];
 #N canvas 493 154 450 300 ADSR_display 0;
@@ -145,17 +145,17 @@ with 9 presets \, (red button)......save the entire table to a file
 #X text 23 91 (...).....more settings: set up wavetables \, toggle
 autosave \, change pitch from different tuning tables, f 34;
 #X coords 0 -1 1 1 270 180 2 10 10;
-#X restore 823 371 pd ADSR_display;
+#X restore 823 376 pd ADSR_display;
 #X text 837 234 __RINGMOD____________________________;
-#X text 824 248 top slider......clip distortion of the modulation oscillator
-\, 1st fader.......relative pitch (x0.25..x10) \, 2nd+3rd.........attack
-(0..4800ms) and decay (0..4800ms) pitch envelope generator., f 63
-;
 #N canvas 598 696 377 121 ADSR_CURVES_display 0;
 #X text 14 12 __DELAY_____________________;
 #X text 11 31 [delay_time] 0..2000ms \, [delay_gain] 0..1, f 24;
 #X coords 0 -1 1 1 210 60 2 10 10;
-#X restore 825 309 pd ADSR_CURVES_display;
+#X restore 825 314 pd ADSR_CURVES_display;
+#X text 824 248 top slider.....bitcrush of the ringmod-oscillator \,
+1st fader.......ringmodulator (0..8xpitch) \, 2nd fader.......bitcrush
+bit depth (2..24 bit) \, 3rd fader.......bitcrush samplerate (100..44100Hz)
+, f 52;
 #X connect 1 0 2 0;
 #X connect 2 0 5 0;
 #X connect 3 0 2 1;
