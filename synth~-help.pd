@@ -1,0 +1,162 @@
+#N canvas 196 59 1471 953 12;
+#X declare -path ../lib;
+#X declare -path objects;
+#X declare -path cadsr;
+#X obj 359 801 out1~;
+#X obj 359 30 tgl 32 0 empty \$0-pseudo_toggle-set empty 17 7 0 10
+-262144 -1 -1 0 1;
+#N canvas 112 194 744 562 pseudo_seq 0;
+#X obj 102 263 random 8;
+#X obj 102 288 map;
+#X msg 177 266 0 2 4 5 7 9 11;
+#X obj 176 239 sel 1;
+#X obj 102 313 + 60;
+#X obj 100 158 metro 500;
+#X obj 107 68 inlet;
+#X obj 102 338 t f b, f 15;
+#X obj 249 64 inlet;
+#X obj 249 89 expr 60000 / $f1;
+#X obj 249 114 t f f;
+#X obj 212 390 f;
+#X obj 115 418 pack 0 0;
+#X msg 116 450 \$1 80 \$2;
+#X obj 116 475 outlet;
+#X obj 395 62 inlet;
+#X obj 310 190 * 0.7;
+#X obj 100 182 s \$0-clock;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 1 1;
+#X connect 3 0 2 0;
+#X connect 4 0 7 0;
+#X connect 5 0 0 0;
+#X connect 5 0 17 0;
+#X connect 6 0 5 0;
+#X connect 6 0 3 0;
+#X connect 7 0 12 0;
+#X connect 7 1 11 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 5 1;
+#X connect 10 1 16 0;
+#X connect 11 0 12 1;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 15 0 16 1;
+#X connect 16 0 11 1;
+#X restore 359 64 pd pseudo_seq;
+#X floatatom 403 29 5 0 999 1 bpm #0-bpm-set -;
+#N canvas 925 833 237 160 ... 0;
+#N canvas 515 469 384 171 declarations_and_tables 0;
+#X obj 43 36 declare -path ../lib;
+#X obj 43 61 declare -path objects;
+#X obj 43 86 declare -path cadsr;
+#X restore 10 11 pd declarations_and_tables;
+#N canvas 471 478 702 288 init 0;
+#X msg 220 130 0;
+#X msg 255 107 120;
+#X obj 255 132 s \$0-bpm-set;
+#X obj 220 155 s \$0-pseudo_toggle-set;
+#X obj 586 25 loadbang;
+#X obj 583 82 s \$0-init-set;
+#X msg 582 52 bang;
+#X obj 99 27 r \$0-init;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 4 0 6 0;
+#X connect 6 0 5 0;
+#X connect 7 0 0 0;
+#X connect 7 0 1 0;
+#X restore 10 33 pd init;
+#X obj 11 57 loadbang;
+#X obj 11 107 s \$0-display_filename;
+#X msg 11 82 symbol init;
+#X connect 2 0 4 0;
+#X connect 4 0 3 0;
+#X restore 478 29 pd ...;
+#X obj 359 255 synth~ \$0;
+#X obj 325 29 bng 32 250 50 0 \$0-init \$0-init-set empty 17 7 0 10
+-262144 -1 -1;
+#N canvas 493 154 450 300 ADSR_display 0;
+#X text 11 41 a2.....attack curve (-1..1);
+#X text 11 26 a1.....attack time (0..4800ms);
+#X text 11 56 a3.....decay time (0..4800ms);
+#X text 11 71 a4.....decay curve (-1..1);
+#X text 11 86 a5.....sustain level (0..100);
+#X text 11 101 a6.....release time (0..4800);
+#X text 11 116 a7.....release curve (-1..1);
+#X text 18 9 __ADSR_______________________;
+#X coords 0 -1 1 1 220 125 2 10 10;
+#X restore 362 110 pd ADSR_display;
+#N canvas 0 59 852 607 ADSR_CURVES_display 0;
+#X text 18 45 0.....linear function \, straight line;
+#X text 18 29 -1<0 logarithmic function \, wide curve;
+#X text 18 62 0<=1..exponential function \, spikey curve;
+#X text 39 11 __ADSR_CURVES_____________________;
+#X coords 0 -1 1 1 300 70 2 10 10;
+#X restore 584 166 pd ADSR_CURVES_display;
+#X text 358 234 [a1.......a7];
+#X text 594 48 a continous ramp (0..1) reads the index of a [wavetable]
+and its output reads the index of the [transferfunction]. You can slide
+through 4 different wavetables and 2 different transferfunctions.,
+f 31;
+#X text 702 236 [ringmod];
+#X text 772 236 [delay];
+#N canvas 248 179 1124 816 MOD_SEQUENCER 0;
+#X text 53 12 __MOD_SEQUENCER_______________________;
+#X text 50 123 up....(count 0..7 upwards) \, dn....(count 7..0 down)
+\, ud....(count 0..7..0) \, du....(count 7..0..7), f 27;
+#X text 284 11 --->>;
+#X text 11 30 (wf).............browse [wavetable] \; (tf).............browse
+[transferfunction] \; (rm).............modulate ringmod_pitch \; [8
+faders].......table (0..1) \; [thick fader]....smooth steps (0..4800s)
+\; (button).........counter direction, f 44;
+#X coords 0 -1 1 1 320 180 2 10 10;
+#X restore 37 363 pd MOD_SEQUENCER;
+#X text 520 459 [p1.....p5];
+#X text 600 460 [presets];
+#X text 822 369 [other settings];
+#X text 381 461 [mod_sequencer];
+#X text 685 459 [mod_sequencer];
+#N canvas 493 154 450 300 ADSR_display 0;
+#X text 12 11 __PITCH_(p1...p5)_______________;
+#X text 18 34 p1.....portamento (0..4800ms) \, p2.....vibrato_speed
+(0..541 Hz) \, p3.....vibrato_depth (0..1) \, p4.....octave(-3..3)
+\, p5.....detune, f 33;
+#X coords 0 -1 1 1 250 112 2 10 10;
+#X restore 368 496 pd ADSR_display;
+#N canvas 880 536 733 435 ADSR_display 0;
+#X text 20 11 __PRESETS_______________________;
+#X text 13 28 9x9.....reads 9 differnt settings from the preset \,
+(s).....write button. while border is red \, press any pad on the 9x9
+and this block will be written in a table \, (n).....write next \,
+saves any changes to the next block \, if it is already the 9th block
+it will start again and write this block on "0" \, (a).....write this
+block 9 times to entire table \, (green button)....open a new file
+with 9 presets \, (red button)......save the entire table to a file
+\, [preset_name].....just a display of the current file being loaded
+;
+#X coords 0 -1 1 1 424 190 2 10 10;
+#X restore 370 610 pd ADSR_display;
+#N canvas 493 154 450 300 ADSR_display 0;
+#X text 23 25 (m)/(p8).....switch between monophonic or polyphonic
+(8 voices), f 32;
+#X text 23 72 (init)....default settings;
+#X text 23 91 (...).....more settings: set up wavetables \, toggle
+autosave \, change pitch from different tuning tables, f 34;
+#X coords 0 -1 1 1 270 180 2 10 10;
+#X restore 823 371 pd ADSR_display;
+#X text 837 234 __RINGMOD____________________________;
+#X text 824 248 top slider......clip distortion of the modulation oscillator
+\, 1st fader.......relative pitch (x0.25..x10) \, 2nd+3rd.........attack
+(0..4800ms) and decay (0..4800ms) pitch envelope generator., f 63
+;
+#N canvas 598 696 377 121 ADSR_CURVES_display 0;
+#X text 14 12 __DELAY_____________________;
+#X text 11 31 [delay_time] 0..2000ms \, [delay_gain] 0..1, f 24;
+#X coords 0 -1 1 1 210 60 2 10 10;
+#X restore 825 309 pd ADSR_CURVES_display;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 1;
+#X connect 5 0 0 0;

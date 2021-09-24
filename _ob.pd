@@ -1,0 +1,108 @@
+#N canvas 0 105 450 300 12;
+#X msg 64 87 dir;
+#X obj 64 112 pdcontrol;
+#X msg 64 137 symbol \$1/presets;
+#X obj 64 162 savepanel;
+#X obj 64 187 list fromsymbol;
+#X obj 65 236 list tosymbol;
+#X obj 64 212 list split 38;
+#X obj 69 607 s \$0-filename-set;
+#X obj 65 261 t s s s s, f 10;
+#X msg 81 513 write /home/mensch/puredata/0.beemo/presets/\$1, f 14
+;
+#X msg 96 405 write /home/mensch/puredata/0.beemo/presets/mod0/\$1,
+f 14;
+#X msg 127 297 write /home/mensch/puredata/0.beemo/presets/mod1/\$1,
+f 13;
+#X obj 127 382 s \$0-mod_table1;
+#X obj 96 490 s \$0-mod_table0;
+#X obj 81 583 s \$0-data;
+#X obj 61 59 r \$0-save_file;
+#X obj 318 49 r \$0-open_file;
+#X msg 324 97 dir;
+#X obj 324 122 pdcontrol;
+#X msg 324 147 symbol \$1/presets;
+#X obj 324 197 list fromsymbol;
+#X obj 325 246 list tosymbol;
+#X obj 324 222 list split 38;
+#X obj 324 172 openpanel;
+#X obj 369 617 s \$0-filename-set;
+#X obj 427 392 s \$0-mod_table1;
+#X obj 396 500 s \$0-mod_table0;
+#X obj 381 593 s \$0-data;
+#X msg 427 307 read /home/mensch/puredata/0.beemo/presets/mod1/\$1,
+f 13;
+#X msg 396 415 read /home/mensch/puredata/0.beemo/presets/mod0/\$1,
+f 14;
+#X msg 381 523 read /home/mensch/puredata/0.beemo/presets/\$1, f 14
+;
+#X obj 325 271 t b s s s s;
+#X obj 340 652 s \$0-preset_bank-set;
+#X obj 745 59 r \$0-preset_bank;
+#X obj 749 184 spigot;
+#X obj 762 156 r \$0-preset_toggle;
+#X obj 744 276 symbol;
+#X obj 749 209 t b b;
+#X obj 762 243 r \$0-filename;
+#X obj 801 279 s \$0-filename-set;
+#X obj 788 399 t s s s;
+#X msg 786 637 write /home/mensch/puredata/0.beemo/presets/\$1, f 14
+;
+#X msg 801 529 write /home/mensch/puredata/0.beemo/presets/mod0/\$1,
+f 14;
+#X msg 832 421 write /home/mensch/puredata/0.beemo/presets/mod1/\$1,
+f 13;
+#X obj 832 506 s \$0-mod_table1;
+#X obj 801 614 s \$0-mod_table0;
+#X obj 786 707 s \$0-data;
+#X obj 912 176 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 745 84 spigot;
+#X obj 903 93 r \$0-autosave;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 6 0;
+#X connect 5 0 8 0;
+#X connect 6 1 5 0;
+#X connect 8 0 7 0;
+#X connect 8 1 9 0;
+#X connect 8 2 10 0;
+#X connect 8 3 11 0;
+#X connect 9 0 14 0;
+#X connect 10 0 13 0;
+#X connect 11 0 12 0;
+#X connect 15 0 0 0;
+#X connect 16 0 17 0;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 19 0 23 0;
+#X connect 20 0 22 0;
+#X connect 21 0 31 0;
+#X connect 22 1 21 0;
+#X connect 23 0 20 0;
+#X connect 28 0 25 0;
+#X connect 29 0 26 0;
+#X connect 30 0 27 0;
+#X connect 31 0 32 0;
+#X connect 31 1 24 0;
+#X connect 31 2 30 0;
+#X connect 31 3 29 0;
+#X connect 31 4 28 0;
+#X connect 33 0 48 0;
+#X connect 34 0 37 0;
+#X connect 35 0 34 1;
+#X connect 36 0 40 0;
+#X connect 37 0 36 0;
+#X connect 37 1 39 0;
+#X connect 38 0 36 1;
+#X connect 40 0 41 0;
+#X connect 40 1 42 0;
+#X connect 40 2 43 0;
+#X connect 41 0 46 0;
+#X connect 42 0 45 0;
+#X connect 43 0 44 0;
+#X connect 47 0 37 0;
+#X connect 48 0 34 0;
+#X connect 49 0 48 1;

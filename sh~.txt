@@ -1,0 +1,52 @@
+Pd 0.51-4 on Linux x86_64
+--------------------------------------------------------------------------------
+'pd-gui' connecting to 'pd' on localhost 43813 ...
+------------------ done with main ----------------------
+Tk 8.6.11
+detected font: DejaVu Sans Mono
+using font: DejaVu Sans Mono bold
+
+-----------------------------------------------------------------------------
+:: Cyclone 0.5-5; Released november 25th 2020
+:: License: BSD-3-Clause (aka Revised BSD License)
+:: Copyright © 2003-2020 - Krzysztof Czaja, Hans-Christoph Steiner,
+:: Fred Jan Kraan, Alexandre Porres, Derek Kwan, Matt Barber and others.
+:: ---------------------------------------------------------------------------
+:: Cyclone 0.5-5 needs at least Pd 0.51-3 (you have 0.51-4, you're good!)
+:: Loading the cyclone library did the following:
+::   - A) Loaded the non alpha-numeric objects, which are: [!-], [!-~],
+:: [!/], [!/~], [!=~], [%~], [+=~], [<=~], [<~], [==~], [>=~] and [>~]
+::   - B) Added /home/mensch/puredata/externals/cyclone
+:: to Pd's path so the other objects can be loaded too
+:: but use [declare -path cyclone] to guarantee search priority in the patch
+-----------------------------------------------------------------------------
+
+Loading plugin: /usr/lib/pd/tcl/pd_deken.tcl
+[deken]: platform detected: Linux-x86_64-float32
+Loading plugin: /usr/lib/pd/tcl/pd_docsdir.tcl
+[deken]: platform re-detected: Linux-amd64-float32
+the Pd window filtered 31 lines
+Pd documents directory: /home/mensch/puredata
+saved to: /home/mensch/puredata/0.3op/main.pd
+saved to: /home/mensch/puredata/0.3op/main.pd
+saved to: /home/mensch/puredata/0.3op/main.pd
+saved to: /home/mensch/puredata/0.3op/main.pd
+saved to: /home/mensch/puredata/0.3op/main.pd
+saved to: /home/mensch/puredata/0.3op/main.pd
+saved to: /home/mensch/puredata/0.3op/main.pd
+saved to: /home/mensch/puredata/0.3op/main.pd
+saved to: /home/mensch/puredata/0.3op/main.pd
+saved to: /home/mensch/puredata/0.3op/main.pd
+saved to: /home/mensch/puredata/0.3op/main.pd
+saved to: /home/mensch/puredata/0.3op/main.pd
+saved to: /home/mensch/puredata/0.3op/main.pd
+saved to: /home/mensch/puredata/0.3op/main.pd
+saved to: /home/mensch/puredata/0.3op/main.pd
+saved to: /home/mensch/puredata/0.3op/objects/ctl.pd
+saved to: /home/mensch/puredata/0.3op/objects/ctl.pd
+saved to: /home/mensch/puredata/0.3op/main.pd
+saved to: /home/mensch/puredata/0.3op/main.pd
+saved to: /home/mensch/puredata/0.3op/objects/ctl.pd
+saved to: /home/mensch/puredata/0.3op/objects/ctl.pd
+saved to: /home/mensch/puredata/0.3op/main.pd
+saved to: /home/mensch/puredata/0.3op/main.pd
