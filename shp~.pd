@@ -1,4 +1,4 @@
-#N canvas 274 -71 826 922 12;
+#N canvas 657 8 716 990 12;
 #X obj 140 539 *~, f 5;
 #N canvas 50 329 713 627 ringmod 0;
 #X obj 190 446 *~;
@@ -39,7 +39,7 @@
 #X connect 4 0 3 0;
 #X connect 6 0 2 0;
 #X connect 7 0 5 0;
-#X restore 126 343 pd shaper;
+#X restore 114 345 pd shaper;
 #N canvas 592 143 667 791 adsr 0;
 #X obj 358 156 sel 1;
 #X obj 418 248 f;
@@ -64,7 +64,7 @@
 #X connect 9 0 3 1;
 #X connect 10 0 0 0;
 #X restore 140 685 pd adsr;
-#N canvas 903 506 823 513 midi 0;
+#N canvas 1001 106 919 656 midi 0;
 #X obj 28 29 r \$0-pitch;
 #X obj 27 431 *~;
 #X obj 424 233 / 6;
@@ -110,14 +110,14 @@
 #X connect 9 0 11 1;
 #X connect 11 0 1 0;
 #X restore 29 68 pd octave;
-#N canvas 0 66 452 597 detune 0;
+#N canvas 232 505 707 774 detune 0;
 #X obj 113 48 inlet;
 #X obj 132 499 outlet;
-#X obj 176 85 r \$2-pitch_detune;
+#X obj 226 42 r \$2-pitch_detune;
 #X obj 221 148 s \$2-pitch_detune-set;
 #X obj 162 198 f;
 #X obj 113 73 t f b b;
-#X obj 162 275 * 100;
+#X obj 161 234 * 100;
 #X obj 162 325 random;
 #X obj 162 300 t b f f;
 #X obj 230 346 * 0.5;
@@ -127,6 +127,8 @@
 #X obj 162 375 * 0.003;
 #X msg 173 42 1;
 #X obj 132 437 *;
+#X floatatom 162 425 5 0 0 0 - - -;
+#X obj 161 259 + 2;
 #X connect 0 0 5 0;
 #X connect 2 0 12 0;
 #X connect 2 0 12 1;
@@ -134,7 +136,7 @@
 #X connect 5 0 15 0;
 #X connect 5 1 4 0;
 #X connect 5 2 3 0;
-#X connect 6 0 8 0;
+#X connect 6 0 17 0;
 #X connect 7 0 10 0;
 #X connect 8 0 7 0;
 #X connect 8 1 7 1;
@@ -142,10 +144,12 @@
 #X connect 9 0 10 1;
 #X connect 10 0 13 0;
 #X connect 11 0 15 1;
-#X connect 12 0 4 1;
+#X connect 11 0 16 0;
+#X connect 12 0 4 0;
 #X connect 13 0 11 0;
 #X connect 14 0 5 0;
 #X connect 15 0 1 0;
+#X connect 17 0 8 0;
 #X restore 26 136 pd detune;
 #X obj 28 102 tabread4 \$2-mtof;
 #X obj 26 252 pack 0 0;
@@ -154,6 +158,7 @@
 #X obj 106 162 *;
 #X obj 93 222 * 4800;
 #X obj 106 187 *;
+#X floatatom 93 247 5 0 0 0 - - -;
 #X connect 0 0 19 0;
 #X connect 1 0 15 0;
 #X connect 2 0 13 0;
@@ -185,6 +190,7 @@
 #X connect 24 0 27 1;
 #X connect 25 0 27 0;
 #X connect 26 0 22 1;
+#X connect 26 0 28 0;
 #X connect 27 0 26 0;
 #X restore 138 284 pd midi;
 #X obj 401 26 tgl 30 0 \$0-trigger \$0-trigger-set empty 17 7 0 10
@@ -192,7 +198,7 @@
 #X floatatom 401 72 4 0 0 0 velocity #0-velocity-set #0-velocity;
 #X floatatom 401 93 4 0 0 0 pitch #0-pitch-set #0-pitch;
 #X obj 39 36 inlet;
-#X obj 138 714 outlet~;
+#X obj 124 803 outlet~;
 #X obj 39 61 unpack 0 0;
 #X obj 39 86 swap;
 #X obj 8 120 t f f;
@@ -276,10 +282,15 @@
 #X connect 31 0 28 1;
 #X restore 129 633 pd bitcrusher_wf;
 #X obj 207 443 *~ 0.5;
-#X connect 0 0 18 0;
+#X obj 140 710 *~ 0.3;
+#X obj 140 564 *~ 0.5;
+#X obj 62 407 *~ 0.5;
+#X obj 126 604 +~;
+#X connect 0 0 21 0;
 #X connect 1 0 19 0;
 #X connect 2 0 0 0;
-#X connect 3 0 9 0;
+#X connect 2 0 22 0;
+#X connect 3 0 20 0;
 #X connect 4 0 2 0;
 #X connect 4 0 1 0;
 #X connect 8 0 10 0;
@@ -293,3 +304,7 @@
 #X connect 15 1 17 0;
 #X connect 18 0 3 0;
 #X connect 19 0 0 1;
+#X connect 20 0 9 0;
+#X connect 21 0 23 1;
+#X connect 22 0 23 0;
+#X connect 23 0 18 0;

@@ -1,8 +1,8 @@
-#N canvas 588 179 1070 712 12;
+#N canvas 495 214 1266 776 12;
 #X declare -path ../lib;
 #X declare -path objects;
 #X declare -path cadsr;
-#X obj 35 377 out1~;
+#X obj 35 364 out1~;
 #X obj 42 28 tgl 32 0 empty \$0-pseudo_toggle-set empty 17 7 0 10 -262144
 -1 -1 0 1;
 #N canvas 186 267 744 562 pseudo_seq 0;
@@ -69,10 +69,10 @@
 #X connect 7 0 1 0;
 #X restore 10 33 pd init;
 #X restore 120 33 pd ...;
-#X obj 41 120 synth~ \$0;
 #X obj 134 55 bng 32 250 50 0 \$0-init \$0-init-set empty 17 7 0 10
 -262144 -1 -1;
+#X obj 37 120 synth~ \$0 1;
 #X connect 1 0 2 0;
-#X connect 2 0 5 0;
+#X connect 2 0 6 0;
 #X connect 3 0 2 1;
-#X connect 5 0 0 0;
+#X connect 6 0 0 0;

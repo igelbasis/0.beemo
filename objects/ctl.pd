@@ -19,7 +19,7 @@
 #X connect 7 0 8 0;
 #X connect 8 0 5 1;
 #X restore 62 61 pd autowrite;
-#N canvas 0 91 294 357 write 0;
+#N canvas 36 147 294 357 write 0;
 #X obj 56 191 r \$1-\$2;
 #X obj 40 214 f;
 #X obj 108 106 s \$1-\$2-set;
@@ -58,15 +58,18 @@
 #X connect 6 0 7 0;
 #X connect 7 0 4 0;
 #X restore 62 105 pd read;
-#N canvas 0 59 390 259 init 0;
-#X obj 122 41 r \$1-init;
-#X obj 122 66 f \$3;
-#X obj 123 156 s \$1-\$2-set;
+#N canvas 0 59 407 448 init 0;
+#X obj 122 306 f \$3;
+#X obj 123 336 s \$1-\$2-set;
 #X obj 222 51 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
+#X obj 122 41 r \$1-init;
+#X obj 122 66 del 150;
 #X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X connect 3 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
 #X restore 62 127 pd init;
 #X obj 165 61 r \$1-msg;
 #X obj 165 86 route \$2;

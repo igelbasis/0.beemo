@@ -1,4 +1,4 @@
-#N canvas 808 -82 722 905 12;
+#N canvas 760 59 722 905 12;
 #X obj 131 134 cnv 15 100 60 empty empty BMO\$2 20 12 1 40 -262144
 -162280 0;
 #N canvas 652 407 1150 437 display 0;
@@ -159,11 +159,11 @@
 #X obj 154 12 hsl 197 15 0 1 0 0 \$0-wf_slider \$0-wf_slider-set empty
 -2 -8 0 10 -191407 -261682 -1 0 1;
 #X obj 355 31 vsl 25 80 0 1 0 0 \$0-ringmod \$0-ringmod-set empty 0
--9 0 10 -191407 -262130 -1 0 1;
+-9 0 10 -191407 -262130 -1 1200 1;
 #X obj 382 31 vsl 20 80 0 1 0 0 \$0-bit_depth \$0-bit_depth-set empty
 0 -9 0 10 -191407 -228856 -1 0 1;
 #X obj 404 31 vsl 20 80 0 1 0 0 \$0-bit_rate \$0-bit_rate-set empty
-0 -9 0 10 -203890 -245500 -1 0 1;
+0 -9 0 10 -203890 -245500 -1 5400 1;
 #X obj 12 14 vsl 20 97 0 1 0 0 \$0-adsr_attack \$0-adsr_attack-set
 empty 0 -9 0 10 -191407 -262144 -1 0 1;
 #X obj 51 14 vsl 20 97 0 1 0 0 \$0-adsr_decay \$0-adsr_decay-set empty
@@ -336,7 +336,7 @@ empty 17 7 0 10 -262144 -1 -1 0 1;
 17 7 0 10 -237435 -191407 -1;
 #X obj 287 130 bng 19 250 50 0 \$0-save_file \$0-save_file-set empty
 17 7 0 10 -261885 -191407 -1;
-#N canvas 155 642 588 489 preset 0;
+#N canvas 478 112 614 624 preset 0;
 #X obj 40 100 bng 17 250 44 0 \$0-write_preset \$0-write_preset-set
 s 4 8 0 18 -228856 -128992 -240104;
 #X obj 40 117 cnv 15 55 55 empty \$0-preset_bg empty 20 12 0 14 -262144
@@ -400,7 +400,7 @@ s 4 8 0 18 -228856 -128992 -240104;
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0;
 #X f 15;
-#N canvas 462 614 561 563 objects 0;
+#N canvas 903 355 893 715 objects 0;
 #X obj -17 29 ctl \$0 adsr_attack 0 0;
 #X obj -17 73 ctl \$0 adsr_decay 0.6 2;
 #X obj -17 51 ctl \$0 adsr_attack_curve 0.5 1;
@@ -426,7 +426,6 @@ s 4 8 0 18 -228856 -128992 -240104;
 #X obj 11 216 ctl \$0 delay_time 0 25;
 #X obj 11 241 ctl \$0 delay_gain 0 26;
 #X obj -8 264 ctl \$0 pitch_octave 0.5 27;
-#X obj 4 289 ctl \$0 pitch_detune 0 28;
 #X obj 4 314 ctl \$0 mono 0 29;
 #X obj 249 230 ctl \$0 mode0_wf 0 30;
 #X obj 249 255 ctl \$0 mode0_tf 0 31;
@@ -439,6 +438,7 @@ s 4 8 0 18 -228856 -128992 -240104;
 #X obj 218 115 ctl \$0 bit_depth 0 10;
 #X obj 218 140 ctl \$0 bit_rate 0 11;
 #X obj 218 165 ctl \$0 bitcrush_ring 0 12;
+#X obj 4 289 ctl \$0 pitch_detune 0.1 28;
 #X restore 196 112 pd objects;
 #X msg 209 205 const 0;
 #X obj 209 230 s \$0-data;
@@ -500,13 +500,13 @@ s 4 8 0 18 -228856 -128992 -240104;
 #X coords 0 -1 1 1 55 72 2 40 100;
 #X restore 266 151 pd preset;
 #X obj 198 153 vsl 15 67 0 1 0 0 \$0-vibrato_speed \$0-vibrato_speed-set
-empty 0 -9 0 10 -178924 -233441 -1 0 1;
+empty 0 -9 0 10 -178924 -233441 -1 800 1;
 #X obj 215 153 vsl 15 67 0 1 0 0 \$0-vibrato_depth \$0-vibrato_depth-set
-empty 0 -9 0 10 -208051 -233441 -1 0 1;
+empty 0 -9 0 10 -208051 -233441 -1 2000 1;
 #X obj 232 153 vsl 15 67 0 1 0 0 \$0-pitch_octave \$0-pitch_octave-set
 empty 0 -9 0 10 -220534 -262144 -1 3300 1;
 #X obj 249 153 vsl 15 67 0 1 0 0 \$0-pitch_detune \$0-pitch_detune-set
-empty 0 -9 0 10 -228856 -162280 -1 0 1;
+empty 0 -9 0 10 -228856 -162280 -1 700 1;
 #X obj 419 130 bng 19 250 50 0 \$0-mono_button \$0-mono_button-set
 m 6 9 0 14 -262144 -1 -1;
 #X obj 461 130 bng 19 250 50 0 \$0-open_settings \$0-open_settings-set
@@ -962,7 +962,7 @@ inv_ex30.wav \; chebchev3_U.wav \; chebchev4_U.wav \; chebchev5_U.wav
 #X obj 48 143 mx \$0 tf1_bang mode1_tf mod_tf 1;
 #X obj 48 165 mx \$0 rm1_bang mode1_rm mod_rm 1;
 #X restore 490 114 pd matrix;
-#N canvas 1228 672 553 398 midinote 0;
+#N canvas 948 379 553 398 midinote 0;
 #X obj 62 16 inlet;
 #X obj 67 128 makenote;
 #X obj 62 155 poly 8 1;
@@ -991,7 +991,7 @@ inv_ex30.wav \; chebchev3_U.wav \; chebchev4_U.wav \; chebchev5_U.wav
 #X connect 10 0 11 0;
 #X restore 27 332 pd midinote;
 #X f 18;
-#X obj 25 488 clone shp~ 8 \$0;
+#X obj 31 696 clone shp~ 8 \$0;
 #N canvas 234 176 511 549 delay 0;
 #X obj 37 37 inlet~;
 #X obj 187 57 r \$0-delay_time;
@@ -1023,23 +1023,23 @@ inv_ex30.wav \; chebchev3_U.wav \; chebchev4_U.wav \; chebchev5_U.wav
 #X connect 10 0 11 0;
 #X connect 10 0 12 0;
 #X connect 13 0 5 0;
-#X restore 25 533 pd delay;
+#X restore 25 733 pd delay;
 #X obj 26 437 spigot;
 #X obj 150 437 spigot;
 #X obj 65 370 r \$0-mono;
 #X obj 189 409 == 0;
 #X obj 27 236 inlet;
-#X obj 25 578 outlet~;
+#X obj 25 778 outlet~;
 #X obj 487 20 r \$1-clock;
 #X obj 487 45 s \$0-clock;
 #X obj 181 153 vsl 15 67 0 1 0 0 \$0-portamento \$0-portamento-set
-empty 0 -9 0 10 -191407 -261558 -1 0 1;
+empty 0 -9 0 10 -191407 -261558 -1 800 1;
 #X obj 27 261 route msg;
 #X obj 27 286 s \$0-msg;
 #X obj 293 362 r \$1-bang\$2;
 #X obj 289 395 s \$0-clock;
 #X obj 126 276 r \$1-midi_note\$2;
-#X obj 108 584 s~ \$1-out\$2;
+#X obj 108 784 s~ \$1-out\$2;
 #X connect 28 0 31 0;
 #X connect 28 1 32 0;
 #X connect 29 0 30 0;
