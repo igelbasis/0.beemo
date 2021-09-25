@@ -1,6 +1,6 @@
 #N canvas 655 379 1040 691 12;
 #X obj 22 24 vsl 12 59 0 1 0 0 \$0-value \$0-value-set empty 0 -9 0
-10 -199729 -262144 -212212 3400 0;
+10 -199729 -262144 -212212 0 0;
 #N canvas 0 66 646 339 colors 0;
 #X obj 84 42 loadbang;
 #X obj 84 67 f \$4;
