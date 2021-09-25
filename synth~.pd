@@ -1,6 +1,6 @@
-#N canvas 540 59 655 608 12;
-#X obj 131 134 cnv 15 100 60 empty empty BMO 20 12 1 40 -262144 -162280
-0;
+#N canvas 808 -82 722 905 12;
+#X obj 131 134 cnv 15 100 60 empty empty BMO\$2 20 12 1 40 -262144
+-162280 0;
 #N canvas 652 407 1150 437 display 0;
 #X obj 153 31 cnv 15 96 64 empty empty empty 20 12 0 14 -245498 -66577
 0;
@@ -1036,10 +1036,15 @@ inv_ex30.wav \; chebchev3_U.wav \; chebchev4_U.wav \; chebchev5_U.wav
 empty 0 -9 0 10 -191407 -261558 -1 0 1;
 #X obj 27 261 route msg;
 #X obj 27 286 s \$0-msg;
+#X obj 293 362 r \$1-bang\$2;
+#X obj 289 395 s \$0-clock;
+#X obj 126 276 r \$1-midi_note\$2;
+#X obj 108 584 s~ \$1-out\$2;
 #X connect 28 0 31 0;
 #X connect 28 1 32 0;
 #X connect 29 0 30 0;
 #X connect 30 0 36 0;
+#X connect 30 0 45 0;
 #X connect 31 0 29 0;
 #X connect 32 0 29 0;
 #X connect 33 0 31 1;
@@ -1049,4 +1054,6 @@ empty 0 -9 0 10 -191407 -261558 -1 0 1;
 #X connect 37 0 38 0;
 #X connect 40 0 41 0;
 #X connect 40 1 28 0;
+#X connect 42 0 43 0;
+#X connect 44 0 28 0;
 #X coords 0 -1 1 1 464 205 2 20 20;
