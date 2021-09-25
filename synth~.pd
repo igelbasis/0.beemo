@@ -1,7 +1,7 @@
-#N canvas 760 59 722 905 12;
+#N canvas 925 296 985 774 12;
 #X obj 131 134 cnv 15 100 60 empty empty BMO\$2 20 12 1 40 -262144
 -162280 0;
-#N canvas 652 407 1150 437 display 0;
+#N canvas 873 686 565 218 display 0;
 #X obj 153 31 cnv 15 96 64 empty empty empty 20 12 0 14 -245498 -66577
 0;
 #X obj 255 31 cnv 15 96 64 empty empty empty 20 12 0 14 -249596 -66577
@@ -159,11 +159,11 @@
 #X obj 154 12 hsl 197 15 0 1 0 0 \$0-wf_slider \$0-wf_slider-set empty
 -2 -8 0 10 -191407 -261682 -1 0 1;
 #X obj 355 31 vsl 25 80 0 1 0 0 \$0-ringmod \$0-ringmod-set empty 0
--9 0 10 -191407 -262130 -1 1200 1;
-#X obj 382 31 vsl 20 80 0 1 0 0 \$0-bit_depth \$0-bit_depth-set empty
-0 -9 0 10 -191407 -228856 -1 0 1;
+-9 0 10 -191407 -262130 -1 5100 1;
+#X obj 382 31 vsl 20 80 0 1 0 0 \$0-rm_fm \$0-rm_fm-set empty 0 -9
+0 10 -191407 -228856 -1 1200 1;
 #X obj 404 31 vsl 20 80 0 1 0 0 \$0-bit_rate \$0-bit_rate-set empty
-0 -9 0 10 -203890 -245500 -1 5400 1;
+0 -9 0 10 -203890 -245500 -1 0 1;
 #X obj 12 14 vsl 20 97 0 1 0 0 \$0-adsr_attack \$0-adsr_attack-set
 empty 0 -9 0 10 -191407 -262144 -1 0 1;
 #X obj 51 14 vsl 20 97 0 1 0 0 \$0-adsr_decay \$0-adsr_decay-set empty
@@ -178,14 +178,14 @@ empty 0 -9 0 10 -195568 -228856 -1 4800 1;
 empty 0 -9 0 10 -208051 -228856 -1 4800 1;
 #X obj 134 14 vsl 15 97 0 1 0 0 \$0-adsr_release_curve \$0-adsr_release_curve-set
 empty 0 -9 0 10 -208051 -228856 -1 4800 1;
-#X obj 358 12 hsl 64 15 0 1 0 0 \$0-ring_depth \$0-ring_depth-set empty
--2 -8 0 10 -191407 -216764 -1 0 1;
+#X obj 358 12 hsl 64 15 0 1 0 0 \$0-ring_spread \$0-ring_spread-set
+empty -2 -8 0 10 -191407 -216764 -1 0 1;
 #X obj 426 14 vsl 20 97 0 1 0 0 \$0-delay_time \$0-delay_time-set empty
 0 -9 0 10 -191407 -191936 -1 0 1;
 #X obj 448 14 vsl 20 97 0 1 0 0 \$0-delay_gain \$0-delay_gain-set empty
 0 -9 0 10 -195568 -191936 -1 0 1;
-#N canvas 1343 802 317 176 \$0-settings 0;
-#N canvas 749 271 960 809 pd_settings_display 0;
+#N canvas 1568 461 352 278 \$0-settings 0;
+#N canvas 641 811 932 625 pd_settings_display 0;
 #X obj 22 22 wave_table \$0 0;
 #X obj 88 22 wave_table \$0 1;
 #X obj 154 22 wave_table \$0 2;
@@ -288,29 +288,42 @@ empty 0 -9 0 10 -208051 -228856 -1 4800 1;
 #X restore 540 36 pd sliders;
 #X obj 229 94 tgl 20 0 \$0-autosave \$0-autosave-set autosave -15 -7
 1 10 -99865 -262144 -99865 0 1;
-#X obj 22 140 tuning \$0;
+#X obj 22 171 tuning \$0;
 #X obj 251 94 tgl 20 0 \$0-autowrite \$0-autowrite-set write 9 -7 1
 10 -13381 -262144 -13381 0 1;
-#X coords 0 -1 1 1 266 146 2 20 20;
+#X obj 24 143 hradio 24 1 0 7 \$0-bit_depth_radio \$0-bit_depth_radio-set
+bit_depth 0 17 1 20 -162280 -228856 -262144 3;
+#X msg 262 406 1 2 4 8 11 16 24;
+#X obj 223 455 map;
+#X obj 198 336 t f b;
+#X floatatom 198 146 0 0 0 1 bit #0-bit_depth-set #0-bit_depth;
+#X obj 198 311 r \$0-bit_depth_radio;
+#X obj 223 480 s \$0-bit_depth-set;
+#X connect 12 0 13 1;
+#X connect 13 0 17 0;
+#X connect 14 0 13 0;
+#X connect 14 1 12 0;
+#X connect 16 0 14 0;
+#X coords 0 -1 1 1 266 177 2 20 20;
 #X restore 13 14 pd pd_settings_display;
-#X restore 474 12 pd \$0-settings;
-#X obj 477 40 r \$0-open_settings;
-#X obj 477 65 f;
-#X obj 477 90 + 1;
-#X obj 477 115 % 2;
-#X obj 477 140 s \$0-settings_status-set;
-#X obj 506 65 tgl 15 0 \$0-settings_status \$0-settings_status-set
+#X restore 624 12 pd \$0-settings;
+#X obj 627 40 r \$0-open_settings;
+#X obj 627 65 f;
+#X obj 627 90 + 1;
+#X obj 627 115 % 2;
+#X obj 627 140 s \$0-settings_status-set;
+#X obj 656 65 tgl 15 0 \$0-settings_status \$0-settings_status-set
 empty 17 7 0 10 -262144 -1 -1 0 1;
-#X obj 654 26 r \$0-settings_status;
-#X obj 654 51 t b f;
-#X obj 654 76 f \$0;
-#X obj 654 101 pack 0 0;
-#X msg 654 126 \; pd-\$1-settings vis \$2 \;;
-#X obj 524 65 bng 15 250 50 0 \$0-preset_bang \$0-preset_bang-set empty
+#X obj 804 26 r \$0-settings_status;
+#X obj 804 51 t b f;
+#X obj 804 76 f \$0;
+#X obj 804 101 pack 0 0;
+#X msg 804 126 \; pd-\$1-settings vis \$2 \;;
+#X obj 674 65 bng 15 250 50 0 \$0-preset_bang \$0-preset_bang-set empty
 17 7 0 10 -262144 -1 -1;
-#X obj 880 46 r \$0-init;
-#X msg 880 71 0;
-#X obj 865 210 s \$0-settings_status-set;
+#X obj 1030 46 r \$0-init;
+#X msg 1030 71 0;
+#X obj 1015 210 s \$0-settings_status-set;
 #X msg 200 166 0.5;
 #X connect 20 0 21 0;
 #X connect 21 0 22 0;
@@ -336,7 +349,7 @@ empty 17 7 0 10 -262144 -1 -1 0 1;
 17 7 0 10 -237435 -191407 -1;
 #X obj 287 130 bng 19 250 50 0 \$0-save_file \$0-save_file-set empty
 17 7 0 10 -261885 -191407 -1;
-#N canvas 478 112 614 624 preset 0;
+#N canvas 515 261 614 624 preset 0;
 #X obj 40 100 bng 17 250 44 0 \$0-write_preset \$0-write_preset-set
 s 4 8 0 18 -228856 -128992 -240104;
 #X obj 40 117 cnv 15 55 55 empty \$0-preset_bg empty 20 12 0 14 -262144
@@ -357,7 +370,79 @@ s 4 8 0 18 -228856 -128992 -240104;
 #X obj 40 117 3x3 \$0 preset_bank #efefef #d97673;
 #X obj 52 228 s \$0-preset_bank;
 #X obj 39 69 r \$0-preset_bank-set;
-#X obj 196 59 array define -k -yrange 0 4 \$0-data 1152;
+#N canvas 715 550 893 715 objects 0;
+#X obj -17 29 ctl \$0 adsr_attack 0 0;
+#X obj -17 73 ctl \$0 adsr_decay 0.6 2;
+#X obj -17 51 ctl \$0 adsr_attack_curve 0.5 1;
+#X obj -17 95 ctl \$0 adsr_decay_curve 0.5 3;
+#X obj -17 117 ctl \$0 adsr_sustain 0 4;
+#X obj -17 139 ctl \$0 adsr_release 0.2 5;
+#X obj -17 161 ctl \$0 adsr_release_curve 0.5 6;
+#X obj 211 28 ctl \$0 wf_slider 0 7;
+#X obj 211 53 ctl \$0 tf_slider 0 8;
+#X obj 218 90 ctl \$0 ringmod 0 9;
+#X obj 369 29 ctl \$0 vibrato_depth 0 13;
+#X obj 369 54 ctl \$0 vibrato_speed 0 14;
+#X obj 400 91 ctl \$0 w0_slider 0.0925926 15;
+#X obj 400 116 ctl \$0 w1_slider 0.111111 16;
+#X obj 400 141 ctl \$0 w2_slider 0.12963 17;
+#X obj 400 166 ctl \$0 w3_slider 0.148148 18;
+#X obj 634 36 ctl \$0 w4_slider 0 19;
+#X obj 651 106 ctl \$0 slider0 0 21;
+#X obj 634 61 ctl \$0 w5_slider 0.148148 20;
+#X obj 651 131 ctl \$0 slider1 0 22;
+#X obj 672 174 ctl \$0 step0 0 23;
+#X obj 672 199 ctl \$0 step1 0 24;
+#X obj 11 216 ctl \$0 delay_time 0 25;
+#X obj 11 241 ctl \$0 delay_gain 0 26;
+#X obj -8 264 ctl \$0 pitch_octave 0.5 27;
+#X obj 4 314 ctl \$0 mono 0 29;
+#X obj 249 230 ctl \$0 mode0_wf 0 30;
+#X obj 249 255 ctl \$0 mode0_tf 0 31;
+#X obj 249 310 ctl \$0 mode1_wf 0 33;
+#X obj 249 335 ctl \$0 mode1_tf 0 34;
+#X obj 249 360 ctl \$0 mode1_rm 0 35;
+#X obj 249 280 ctl \$0 mode0_rm 0 32;
+#X obj 192 438 ctl \$0 tuning_browser 0 36;
+#X obj 196 460 ctl \$0 portamento 0 37;
+#X obj 218 140 ctl \$0 bit_rate 0 11;
+#X obj 4 289 ctl \$0 pitch_detune 0.1 28;
+#X obj 218 165 ctl \$0 ring_spread 0 12;
+#X obj 196 485 ctl \$0 bit_depth_radio 3 38;
+#X obj 218 115 ctl \$0 rm_fm 0 10;
+#X restore 196 112 pd objects;
+#X msg 209 205 const 0;
+#X obj 209 230 s \$0-data;
+#X obj 327 124 r \$0-write_preset;
+#X obj 367 149 del 1500;
+#X msg 367 174 0;
+#X msg 327 173 1;
+#X obj 327 198 s \$0-preset_toggle-set;
+#X obj 502 87 r \$0-preset_bank;
+#X obj 502 160 t b;
+#X obj 502 185 del 150;
+#X obj 59 100 bng 17 250 44 0 \$0-write_next \$0-write_next-set n 4
+8 0 18 -228856 -128992 -240104;
+#X obj 78 100 bng 17 250 44 0 \$0-write_all \$0-write_all-set a 3 8
+0 18 -228856 -128992 -240104;
+#X obj 69 401 r \$0-preset_bank;
+#X obj 53 322 r \$0-write_next;
+#X obj 53 347 t b b, f 10;
+#X obj 60 432 f;
+#X obj 60 457 + 1;
+#X obj 60 482 % 9;
+#X obj 60 507 s \$0-preset_bank-set;
+#X obj 107 436 s \$0-write_preset-set;
+#X obj 346 347 for 0 9;
+#X obj 356 302 r \$0-write_all;
+#X obj 379 411 r \$0-preset_bank;
+#X obj 370 442 f;
+#X obj 370 467 + 1;
+#X obj 370 492 % 9;
+#X obj 370 517 s \$0-preset_bank-set;
+#X obj 417 446 s \$0-write_preset-set;
+#X obj 346 372 t f b;
+#X obj 196 59 array define -k -yrange 0 7 \$0-data 1152;
 #A 0 0 0.5 0.6 0.5 0 0.2 0.5 0 0 0 0 0 0 0 0 0.0925926 0.111111 0.12963
 0.148148 0 0.148148 0 0 0 0 0 0 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -400,113 +485,42 @@ s 4 8 0 18 -228856 -128992 -240104;
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 0 0 0 0 0 0;
 #X f 15;
-#N canvas 903 355 893 715 objects 0;
-#X obj -17 29 ctl \$0 adsr_attack 0 0;
-#X obj -17 73 ctl \$0 adsr_decay 0.6 2;
-#X obj -17 51 ctl \$0 adsr_attack_curve 0.5 1;
-#X obj -17 95 ctl \$0 adsr_decay_curve 0.5 3;
-#X obj -17 117 ctl \$0 adsr_sustain 0 4;
-#X obj -17 139 ctl \$0 adsr_release 0.2 5;
-#X obj -17 161 ctl \$0 adsr_release_curve 0.5 6;
-#X obj 211 28 ctl \$0 wf_slider 0 7;
-#X obj 211 53 ctl \$0 tf_slider 0 8;
-#X obj 218 90 ctl \$0 ringmod 0 9;
-#X obj 369 29 ctl \$0 vibrato_depth 0 13;
-#X obj 369 54 ctl \$0 vibrato_speed 0 14;
-#X obj 400 91 ctl \$0 w0_slider 0.0925926 15;
-#X obj 400 116 ctl \$0 w1_slider 0.111111 16;
-#X obj 400 141 ctl \$0 w2_slider 0.12963 17;
-#X obj 400 166 ctl \$0 w3_slider 0.148148 18;
-#X obj 634 36 ctl \$0 w4_slider 0 19;
-#X obj 651 106 ctl \$0 slider0 0 21;
-#X obj 634 61 ctl \$0 w5_slider 0.148148 20;
-#X obj 651 131 ctl \$0 slider1 0 22;
-#X obj 672 174 ctl \$0 step0 0 23;
-#X obj 672 199 ctl \$0 step1 0 24;
-#X obj 11 216 ctl \$0 delay_time 0 25;
-#X obj 11 241 ctl \$0 delay_gain 0 26;
-#X obj -8 264 ctl \$0 pitch_octave 0.5 27;
-#X obj 4 314 ctl \$0 mono 0 29;
-#X obj 249 230 ctl \$0 mode0_wf 0 30;
-#X obj 249 255 ctl \$0 mode0_tf 0 31;
-#X obj 249 310 ctl \$0 mode1_wf 0 33;
-#X obj 249 335 ctl \$0 mode1_tf 0 34;
-#X obj 249 360 ctl \$0 mode1_rm 0 35;
-#X obj 249 280 ctl \$0 mode0_rm 0 32;
-#X obj 192 438 ctl \$0 tuning_browser 0 36;
-#X obj 196 460 ctl \$0 portamento 0 37;
-#X obj 218 115 ctl \$0 bit_depth 0 10;
-#X obj 218 140 ctl \$0 bit_rate 0 11;
-#X obj 218 165 ctl \$0 bitcrush_ring 0 12;
-#X obj 4 289 ctl \$0 pitch_detune 0.1 28;
-#X restore 196 112 pd objects;
-#X msg 209 205 const 0;
-#X obj 209 230 s \$0-data;
-#X obj 327 124 r \$0-write_preset;
-#X obj 367 149 del 1500;
-#X msg 367 174 0;
-#X msg 327 173 1;
-#X obj 327 198 s \$0-preset_toggle-set;
-#X obj 502 87 r \$0-preset_bank;
-#X obj 502 160 t b;
-#X obj 502 185 del 150;
-#X obj 59 100 bng 17 250 44 0 \$0-write_next \$0-write_next-set n 4
-8 0 18 -228856 -128992 -240104;
-#X obj 78 100 bng 17 250 44 0 \$0-write_all \$0-write_all-set a 3 8
-0 18 -228856 -128992 -240104;
-#X obj 69 401 r \$0-preset_bank;
-#X obj 53 322 r \$0-write_next;
-#X obj 53 347 t b b, f 10;
-#X obj 60 432 f;
-#X obj 60 457 + 1;
-#X obj 60 482 % 9;
-#X obj 60 507 s \$0-preset_bank-set;
-#X obj 107 436 s \$0-write_preset-set;
-#X obj 346 347 for 0 9;
-#X obj 356 302 r \$0-write_all;
-#X obj 379 411 r \$0-preset_bank;
-#X obj 370 442 f;
-#X obj 370 467 + 1;
-#X obj 370 492 % 9;
-#X obj 370 517 s \$0-preset_bank-set;
-#X obj 417 446 s \$0-write_preset-set;
-#X obj 346 372 t f b;
 #X connect 3 0 4 0;
 #X connect 5 0 3 0;
-#X connect 8 0 9 0;
+#X connect 7 0 8 0;
+#X connect 9 0 10 0;
+#X connect 9 0 12 0;
 #X connect 10 0 11 0;
-#X connect 10 0 13 0;
-#X connect 11 0 12 0;
-#X connect 12 0 14 0;
-#X connect 13 0 14 0;
+#X connect 11 0 13 0;
+#X connect 12 0 13 0;
+#X connect 14 0 15 0;
 #X connect 15 0 16 0;
-#X connect 16 0 17 0;
-#X connect 17 0 12 0;
-#X connect 20 0 23 1;
+#X connect 16 0 11 0;
+#X connect 19 0 22 1;
+#X connect 20 0 21 0;
 #X connect 21 0 22 0;
+#X connect 21 1 26 0;
 #X connect 22 0 23 0;
-#X connect 22 1 27 0;
 #X connect 23 0 24 0;
 #X connect 24 0 25 0;
-#X connect 25 0 26 0;
-#X connect 28 0 36 0;
-#X connect 29 0 28 0;
-#X connect 30 0 31 1;
+#X connect 27 0 35 0;
+#X connect 28 0 27 0;
+#X connect 29 0 30 1;
+#X connect 30 0 31 0;
 #X connect 31 0 32 0;
 #X connect 32 0 33 0;
-#X connect 33 0 34 0;
-#X connect 36 0 31 0;
-#X connect 36 1 35 0;
+#X connect 35 0 30 0;
+#X connect 35 1 34 0;
 #X coords 0 -1 1 1 55 72 2 40 100;
 #X restore 266 151 pd preset;
 #X obj 198 153 vsl 15 67 0 1 0 0 \$0-vibrato_speed \$0-vibrato_speed-set
-empty 0 -9 0 10 -178924 -233441 -1 800 1;
+empty 0 -9 0 10 -178924 -233441 -1 0 1;
 #X obj 215 153 vsl 15 67 0 1 0 0 \$0-vibrato_depth \$0-vibrato_depth-set
-empty 0 -9 0 10 -208051 -233441 -1 2000 1;
+empty 0 -9 0 10 -208051 -233441 -1 0 1;
 #X obj 232 153 vsl 15 67 0 1 0 0 \$0-pitch_octave \$0-pitch_octave-set
 empty 0 -9 0 10 -220534 -262144 -1 3300 1;
 #X obj 249 153 vsl 15 67 0 1 0 0 \$0-pitch_detune \$0-pitch_detune-set
-empty 0 -9 0 10 -228856 -162280 -1 700 1;
+empty 0 -9 0 10 -228856 -162280 -1 660 1;
 #X obj 419 130 bng 19 250 50 0 \$0-mono_button \$0-mono_button-set
 m 6 9 0 14 -262144 -1 -1;
 #X obj 461 130 bng 19 250 50 0 \$0-open_settings \$0-open_settings-set
@@ -991,7 +1005,7 @@ inv_ex30.wav \; chebchev3_U.wav \; chebchev4_U.wav \; chebchev5_U.wav
 #X connect 10 0 11 0;
 #X restore 27 332 pd midinote;
 #X f 18;
-#X obj 31 696 clone shp~ 8 \$0;
+#X obj 41 490 clone shp~ 8 \$0;
 #N canvas 234 176 511 549 delay 0;
 #X obj 37 37 inlet~;
 #X obj 187 57 r \$0-delay_time;
@@ -1023,23 +1037,23 @@ inv_ex30.wav \; chebchev3_U.wav \; chebchev4_U.wav \; chebchev5_U.wav
 #X connect 10 0 11 0;
 #X connect 10 0 12 0;
 #X connect 13 0 5 0;
-#X restore 25 733 pd delay;
+#X restore 35 527 pd delay;
 #X obj 26 437 spigot;
 #X obj 150 437 spigot;
 #X obj 65 370 r \$0-mono;
 #X obj 189 409 == 0;
 #X obj 27 236 inlet;
-#X obj 25 778 outlet~;
+#X obj 35 572 outlet~;
 #X obj 487 20 r \$1-clock;
 #X obj 487 45 s \$0-clock;
 #X obj 181 153 vsl 15 67 0 1 0 0 \$0-portamento \$0-portamento-set
-empty 0 -9 0 10 -191407 -261558 -1 800 1;
+empty 0 -9 0 10 -191407 -261558 -1 0 1;
 #X obj 27 261 route msg;
 #X obj 27 286 s \$0-msg;
 #X obj 293 362 r \$1-bang\$2;
-#X obj 289 395 s \$0-clock;
+#X obj 294 386 s \$0-clock;
 #X obj 126 276 r \$1-midi_note\$2;
-#X obj 108 784 s~ \$1-out\$2;
+#X obj 118 578 s~ \$1-out\$2;
 #X connect 28 0 31 0;
 #X connect 28 1 32 0;
 #X connect 29 0 30 0;

@@ -1,4 +1,4 @@
-#N canvas 495 214 1266 776 12;
+#N canvas 284 303 886 624 12;
 #X declare -path ../lib;
 #X declare -path objects;
 #X declare -path cadsr;
@@ -71,7 +71,7 @@
 #X restore 120 33 pd ...;
 #X obj 134 55 bng 32 250 50 0 \$0-init \$0-init-set empty 17 7 0 10
 -262144 -1 -1;
-#X obj 37 120 synth~ \$0 1;
+#X obj 49 89 synth~ \$0 1;
 #X connect 1 0 2 0;
 #X connect 2 0 6 0;
 #X connect 3 0 2 1;
