@@ -159,9 +159,9 @@
 #X obj 154 12 hsl 197 15 0 1 0 0 \$0-wf_slider \$0-wf_slider-set empty
 -2 -8 0 10 -191407 -261682 -1 0 1;
 #X obj 355 31 vsl 25 80 0 1 0 0 \$0-ringmod \$0-ringmod-set empty 0
--9 0 10 -191407 -262130 -1 5100 1;
+-9 0 10 -191407 -262130 -1 0 1;
 #X obj 382 31 vsl 20 80 0 1 0 0 \$0-rm_fm \$0-rm_fm-set empty 0 -9
-0 10 -191407 -228856 -1 1200 1;
+0 10 -191407 -228856 -1 0 1;
 #X obj 404 31 vsl 20 80 0 1 0 0 \$0-bit_rate \$0-bit_rate-set empty
 0 -9 0 10 -203890 -245500 -1 0 1;
 #X obj 12 14 vsl 20 97 0 1 0 0 \$0-adsr_attack \$0-adsr_attack-set
@@ -184,7 +184,7 @@ empty -2 -8 0 10 -191407 -216764 -1 0 1;
 0 -9 0 10 -191407 -191936 -1 0 1;
 #X obj 448 14 vsl 20 97 0 1 0 0 \$0-delay_gain \$0-delay_gain-set empty
 0 -9 0 10 -195568 -191936 -1 0 1;
-#N canvas 1568 461 352 278 \$0-settings 0;
+#N canvas 1568 493 352 278 \$0-settings 0;
 #N canvas 641 811 932 625 pd_settings_display 0;
 #X obj 22 22 wave_table \$0 0;
 #X obj 88 22 wave_table \$0 1;
@@ -700,7 +700,7 @@ m 6 9 0 14 -262144 -1 -1;
 #X connect 31 0 33 0;
 #X connect 32 0 33 0;
 #X restore 490 158 pd get_adsr;
-#N canvas 362 586 218 71 ... 0;
+#N canvas 468 631 218 71 ... 0;
 #N canvas 252 131 915 359 declarations_and_tables 0;
 #X obj 43 136 text define -k \$0-windex_file;
 #A set hsine_A.wav \; hsine_B.wav \; htri_A.wav \; htri_B.wav \; cracked_sine_U.wav
