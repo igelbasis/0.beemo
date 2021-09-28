@@ -1,31 +1,112 @@
 <JZML>
 <PROJECT version="5340" width="1024" height="724" osc_target="-1" midi_target="-1" kbmouse_target="-1" skin="Flat"/>
 <WINDOW class="JAZZINTERFACE" text="Default" x="0" y="0" width="1024" height="724" state="1" group="0" font="tahoma,11,0" >
-<WINDOW class="Pads" text="Pads" x="0" y="18" width="411" height="28" id="2" state="1" group="1" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="5137515,1596013" column="1" label="0" multicolor="0" multilabel="0" row="1">
-<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Pads/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
-<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Pads/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
-<VARIABLE name="decay=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Pads/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
-<VARIABLE name="sustain=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Pads/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
-<VARIABLE name="release=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Pads/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
-<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Pads/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
-<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Pads/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<WINDOW class="Pads" text="Mode" x="618" y="104" width="112" height="40" id="3" state="1" group="0" font="tahoma,16,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="865343,1596013" column="1" label="0" multicolor="0" multilabel="1" row="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Mode/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Mode/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="decay=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Mode/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="sustain=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Mode/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="release=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Mode/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Mode/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Mode/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="_tap=0" send="1" osc_target="0" osc_trigger="1" osc_message="/Mode/_tap" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="reset()" script="if (time - _tap > tap2_sensitivity) // Tweak this value to determine double tap sensitivity
+	_tap = 0;
+" trigger_script="" trigger_type="1" trigger="1" clock="0" clock_div="4" osc_message="/Mode/reset" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="tap()" script="if (_tap > 0) {
+	tap2();
+	_tap = 0;
+}
+else {
+	_tap = time;
+	// Actions for single tap here
+}" trigger_script="x" trigger_type="0" trigger="3" clock="0" clock_div="4" osc_message="/Mode/tap" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="tap2()" script="// Actions for double tap here
+SelectMode._show = (SelectMode._show + 1)%2;
+" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/Mode/tap2" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="display()" script="decl n=name(M);
+setattribute(getobject(),'labels',n);" trigger_script="M" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/Mode/display" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
 </WINDOW>
-<WINDOW class="Monitor" text="Monitor" x="2" y="16" width="411" height="28" id="1" state="245" group="1" font="tahoma,14,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="855305" label="0" precision="0" unit="" value="1">
-<VARIABLE name="value=scale(2)" send="0" osc_target="0" osc_trigger="1" osc_message="/Monitor/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<WINDOW class="Pads" text="SelectMode" x="618" y="104" width="112" height="280" id="4" state="0" group="0" font="tahoma,16,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="2436142,5400429" column="1" label="0" multicolor="0" multilabel="1" row="7">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/SelectMode/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SelectMode/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="decay=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SelectMode/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="sustain=1" send="0" osc_target="0" osc_trigger="1" osc_message="/SelectMode/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="release=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SelectMode/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SelectMode/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SelectMode/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="_show=0" send="1" osc_target="0" osc_trigger="1" osc_message="/SelectMode/_show" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="neighbour_name='Mode'" send="1" osc_target="0" osc_trigger="1" osc_message="/SelectMode/neighbour_name" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,22,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="init()" script="show(getobject(),0);" trigger_script="" trigger_type="5" trigger="1" clock="0" clock_div="4" osc_message="/SelectMode/init" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="showhide()" script="show(getobject(),_show);" trigger_script="_show" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/SelectMode/showhide" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="position()" script="decl oo=getobject();decl obj=findobject(neighbour_name);
+decl obj_rect=getattribute(obj,'rect');
+decl x=obj_rect[0];
+decl y=obj_rect[1];
+decl o_rect=getattribute(getobject(),'rect');
+decl w=o_rect[2];
+decl h=o_rect[3];
+setobjectrect(getobject(),{x,y,w,h});" trigger_script="Mode.x" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/SelectMode/position" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="select()" script="if(x!=0) M=firstof(x);" trigger_script="x" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/SelectMode/select" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="leave()" script="_show=0;" trigger_script="x" trigger_type="0" trigger="3" clock="0" clock_div="4" osc_message="/SelectMode/leave" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="label()" script="decl i;
+decl list;
+for(i=0;i<7;i++){
+		list[i]=name(i);
+}
+setattribute(getobject(),'labels',list);" trigger_script="" trigger_type="5" trigger="1" clock="0" clock_div="4" osc_message="/SelectMode/label" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
 </WINDOW>
-<WINDOW class="Monitor" text="Monitor2" x="2" y="55" width="160" height="60" id="3" state="241" group="0" font="tahoma,20,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" label="1" precision="3" unit="" value="1">
-<VARIABLE name="value=keyname(Knob.x*11,1)" send="0" osc_target="0" osc_trigger="1" osc_message="/Monitor2/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<WINDOW class="Pads" text="Key" x="150" y="154" width="40" height="40" id="5" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="865343,1596013" column="1" label="0" multicolor="0" multilabel="0" row="1">
+<PARAM name="x=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Key/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Key/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="decay=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Key/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="sustain=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Key/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="release=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Key/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Key/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/Key/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="_tap=0" send="1" osc_target="0" osc_trigger="1" osc_message="/Key/_tap" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="reset()" script="if (time - _tap > tap2_sensitivity) // Tweak this value to determine double tap sensitivity
+	_tap = 0;
+" trigger_script="" trigger_type="1" trigger="1" clock="0" clock_div="4" osc_message="/Key/reset" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="tap()" script="if (_tap > 0) {
+	tap2();
+	_tap = 0;
+}
+else {
+	_tap = time;
+	// Actions for single tap here
+}" trigger_script="x" trigger_type="0" trigger="3" clock="0" clock_div="4" osc_message="/Key/tap" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="tap2()" script="// Actions for double tap here
+SelectKey._show = (SelectKey._show + 1)%2;
+" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/Key/tap2" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
 </WINDOW>
-<WINDOW class="Knob" text="Knob" x="47" y="129" width="193" height="193" id="4" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="865343,1596013" cursor="0" grid="1" grid_steps="12" label="0" mode="0" physic="1" precision="3" type="0" unit="" value="0">
-<PARAM name="x=" value="0.090909" send="17" osc_target="0" osc_trigger="1" osc_message="/Knob/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
-<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/Knob/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
-<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/Knob/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
-<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Knob/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
-<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/Knob/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
-<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/Knob/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<WINDOW class="Pads" text="SelectKey" x="79" y="20" width="40" height="480" id="6" state="0" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="865343,1596013" column="1" label="0" multicolor="0" multilabel="0" row="12">
+<PARAM name="x=" value="0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000,0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/SelectKey/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attack=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SelectKey/attack" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="decay=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SelectKey/decay" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="sustain=1" send="0" osc_target="0" osc_trigger="1" osc_message="/SelectKey/sustain" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="release=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SelectKey/release" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="hold=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SelectKey/hold" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/SelectKey/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="_show=0" send="1" osc_target="0" osc_trigger="1" osc_message="/SelectKey/_show" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="neighbour_name='Key'" send="1" osc_target="0" osc_trigger="1" osc_message="/SelectKey/neighbour_name" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,1,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="init()" script="show(getobject(),0);" trigger_script="" trigger_type="5" trigger="1" clock="0" clock_div="4" osc_message="/SelectKey/init" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="showhide()" script="show(getobject(),_show);" trigger_script="_show" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/SelectKey/showhide" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="position()" script="decl obj=findobject(neighbour_name);
+decl obj_rect=getattribute(obj,'rect');
+decl x=obj_rect[0];
+decl y=obj_rect[1];
+decl o_rect=getattribute(getobject(),'rect');
+decl w=o_rect[2];
+decl h=o_rect[3];
+setobjectrect(getobject(),{x,y,w,h});" trigger_script="Mode.x" trigger_type="0" trigger="2" clock="0" clock_div="4" osc_message="/SelectKey/position" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="leave()" script="_show=0;" trigger_script="x" trigger_type="0" trigger="3" clock="0" clock_div="4" osc_message="/SelectKey/leave" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
 </WINDOW>
 </WINDOW>
 <VARIABLE name="KEY=" value="0" send="1" osc_target="0" osc_trigger="1" osc_message="/KEY" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="255,-1,255" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="M=" value="4" send="1" osc_target="0" osc_trigger="1" osc_message="/M" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="472,27,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="color=RGB(0.9023,0.0703,0.2773)" send="1" osc_target="0" osc_trigger="1" osc_message="/color" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tap2_sensitivity=0.35" send="1" osc_target="0" osc_trigger="1" osc_message="/tap2_sensitivity" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="17733,-31408,479" kbmouse_scale="0,1,0,1"/>
 <SCRIPT name="modes(m)" script="if(m==0) return {0,2,2,1,2,2,2};
 if(m==1) return {0,2,1,2,2,2,1};
 if(m==2) return {0,1,2,2,2,1,2};
@@ -68,4 +149,20 @@ return {t, t+12, t+24};" trigger_script="" trigger_type="4" trigger="1" clock="0
 decl keynames_flat={'C','Db','D','Eb','E','F','Gb','G','Ab','A','Bb','B'};
 if(type==0) return keynames_sharp[key];
 if(type==1) return keynames_flat[key];" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/keyname" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="name(mode)" script="decl names={'ionian','dorian','phrygian','lydian','mixolydian','aeolian','locrian','harm_major','dorian_b5','phrygian_b4','lydian_b3','mixolydian_b2','aeolian_b1','locrian_b7','harm_minor','locrian_#6','ionian_#5','dorian_#4','phrygian_#3','lydian_#2','mixolydian_#1','mel_minor','dorian_b2','lydian_#5','lydian_b7','mixolydian_b6','locrian_#2','locrian_b4'};
+return names[mode];" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/name" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="neighbours(m)" script="if(m==0) return {0,27,21,3,16,7,4};
+if(m==1) return {1,22,4,17,8,5,21};
+if(m==2) return {2,23,5,18,9,6,22};
+if(m==3) return {3,6,19,10,0,23,24};
+if(m==4) return {4,20,11,1,2,25,0};
+if(m==5) return {5,12,2,25,26,1,14};
+if(m==6) return {6,3,26,27,2,15,13};" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/neighbours" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="display_neighbours(m)" script="decl mlist=neighbours(m);
+decl i;
+decl list;
+for(i==0;i<7;i++){
+		list[i]=name(mlist[i]);
+}
+return list;" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/display_neighbours" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
 </JZML>

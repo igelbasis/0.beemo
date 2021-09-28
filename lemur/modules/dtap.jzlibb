@@ -1,0 +1,110 @@
+<JZML>
+<WINDOW class="Container" text="doubletap" x="0" y="0" width="898" height="648" id="87" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" label="1" tabbar="1" meta="0">
+<WINDOW class="Container" text="Container" x="260" y="-8" width="386" height="248" id="1" state="0" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="1596013" label="1" tabbar="1" meta="0">
+<WINDOW class="MultiSlider" text="MultiSlider" x="0" y="11" width="370" height="52" id="2" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bipolar="0" capture="1" color="1596013" gradient="1" grid="0" grid_steps="1" horizontal="1" label="0" multicolor="0" nbr="1" physic="0">
+<PARAM name="x=" value="0.745665" send="17" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider/x" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,3,3" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider/z" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,4,4" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="MultiSlider" text="MultiSlider2" x="0" y="63" width="370" height="52" id="3" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bipolar="0" capture="1" color="1596013" gradient="1" grid="0" grid_steps="1" horizontal="1" label="0" multicolor="0" nbr="1" physic="0">
+<PARAM name="x=" value="0.283237" send="17" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider2/x" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,3,3" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider2/z" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,4,4" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider2/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider2/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider2/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider2/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="MultiSlider" text="MultiSlider3" x="0" y="115" width="370" height="52" id="4" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bipolar="0" capture="1" color="1596013" gradient="1" grid="0" grid_steps="1" horizontal="1" label="0" multicolor="0" nbr="1" physic="0">
+<PARAM name="x=" value="0.500000" send="17" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider3/x" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,3,3" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider3/z" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,4,4" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider3/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider3/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider3/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider3/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<WINDOW class="MultiSlider" text="MultiSlider4" x="0" y="167" width="370" height="52" id="5" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bipolar="0" capture="1" color="1596013" gradient="1" grid="0" grid_steps="1" horizontal="1" label="0" multicolor="0" nbr="1" physic="0">
+<PARAM name="x=" value="0.500000" send="17" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider4/x" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,3,3" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider4/z" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,4,4" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider4/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider4/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider4/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/MultiSlider4/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+</WINDOW>
+<VARIABLE name="_show=0" send="1" osc_target="0" osc_trigger="1" osc_message="/doubletap/Container/_show" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="init()" script="show(getobject(),0);" trigger_script="" trigger_type="5" trigger="1" clock="0" clock_div="4" osc_message="/doubletap/Container/init" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="showhide()" script="show(getobject(),_show);" trigger_script="_show" trigger_type="0" trigger="1" clock="0" clock_div="4" osc_message="/doubletap/Container/showhide" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="RingArea" text="RingArea" x="0" y="0" width="248" height="248" id="2" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" capture="1" color="1596013" label="0">
+<PARAM name="x=" value="0.500000" send="17" osc_target="0" osc_trigger="1" osc_message="/doubletap/RingArea/x" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="y=" value="0.500000" send="17" osc_target="0" osc_trigger="1" osc_message="/doubletap/RingArea/y" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,1,1" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/doubletap/RingArea/z" midi_target="0" midi_trigger="1" midi_message="0xB0,0xB0,2,2" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/RingArea/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.8" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/RingArea/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/RingArea/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction_x=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/RingArea/attraction_x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction_y=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/RingArea/attraction_y" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="_tap=0" send="1" osc_target="0" osc_trigger="1" osc_message="/doubletap/RingArea/_tap" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="tap()" script="if (_tap > 0) {
+	tap2();
+	_tap = 0;
+}
+else {
+	_tap = time;
+	// Actions for single tap here
+}" trigger_script="z" trigger_type="0" trigger="3" clock="0" clock_div="4" osc_message="/doubletap/RingArea/tap" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="reset()" script="if (time - _tap > tap2_sensitivity) // Tweak this value to determine double tap sensitivity
+	_tap = 0;
+" trigger_script="" trigger_type="1" trigger="1" clock="0" clock_div="4" osc_message="/doubletap/RingArea/reset" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="tap2()" script="// Actions for double tap here
+Container._show = (Container._show + 1)%2;
+" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/doubletap/RingArea/tap2" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="Knob" text="Knob" x="15" y="357" width="245" height="245" id="3" state="5" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" color="865343,1596013" cursor="1" grid="0" grid_steps="1" label="0" mode="0" physic="0" precision="3" type="1" unit="" value="0">
+<PARAM name="x=" value="0.844816" send="17" osc_target="0" osc_trigger="1" osc_message="/doubletap/Knob/x" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/doubletap/Knob/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="value=x" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/Knob/value" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="attraction=1" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/Knob/attraction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/Knob/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="speed=1" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/Knob/speed" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="_tap=0" send="1" osc_target="0" osc_trigger="1" osc_message="/doubletap/Knob/_tap" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="reset()" script="if (time - _tap > tap2_sensitivity) // Tweak this value to determine double tap sensitivity
+	_tap = 0;
+" trigger_script="" trigger_type="1" trigger="1" clock="0" clock_div="4" osc_message="/doubletap/Knob/reset" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="tap()" script="if (_tap > 0) {
+	tap2();
+	_tap = 0;
+}
+else {
+	_tap = time;
+	// Actions for single tap here
+}" trigger_script="z" trigger_type="0" trigger="3" clock="0" clock_div="4" osc_message="/doubletap/Knob/tap" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="tap2()" script="// Actions for double tap here
+x = 0.5;" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/doubletap/Knob/tap2" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+<WINDOW class="MultiSlider" text="CrossFader" x="369" y="387" width="427" height="191" id="86" state="1" group="0" font="tahoma,10,0" send="1" osc_target="-2" midi_target="-2" kbmouse_target="-2" bipolar="1" capture="1" color="12901" gradient="1" grid="0" grid_steps="1" horizontal="1" label="0" multicolor="0" nbr="1" physic="0">
+<PARAM name="x=" value="0.500000" send="17" osc_target="0" osc_trigger="1" osc_message="/doubletap/CrossFader/x" midi_target="-2" midi_trigger="1" midi_message="0xB0,0xB0,40,40" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<PARAM name="z=" value="0.000000" send="17" osc_target="0" osc_trigger="1" osc_message="/doubletap/CrossFader/z" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" osc_scale="0.000000,1.000000" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="tension=0.2" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/CrossFader/tension" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="friction=0.9" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/CrossFader/friction" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="height=0.5" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/CrossFader/height" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="light=0" send="0" osc_target="0" osc_trigger="1" osc_message="/doubletap/CrossFader/light" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<VARIABLE name="_tap=0" send="1" osc_target="0" osc_trigger="1" osc_message="/doubletap/CrossFader/_tap" midi_target="-1" midi_trigger="1" midi_message="0x90,0x90,0,0" midi_scale="0,16383" kbmouse_target="-1" kbmouse_trigger="1" kbmouse_message="0,0,0" kbmouse_scale="0,1,0,1"/>
+<SCRIPT name="reset()" script="if (time - _tap > tap2_sensitivity) // Tweak this value to determine double tap sensitivity
+	_tap = 0;
+" trigger_script="" trigger_type="1" trigger="1" clock="0" clock_div="4" osc_message="/doubletap/CrossFader/reset" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="tap()" script="if (_tap > 0) {
+	tap2();
+	_tap = 0;
+}
+else {
+	_tap = time;
+	// Actions for single tap here
+}" trigger_script="z" trigger_type="0" trigger="3" clock="0" clock_div="4" osc_message="/doubletap/CrossFader/tap" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+<SCRIPT name="tap2()" script="// Actions for double tap here
+x = 0.5;" trigger_script="" trigger_type="4" trigger="1" clock="0" clock_div="4" osc_message="/doubletap/CrossFader/tap2" midi_message="0x90,0x90,0,0" midi_target="-1" flag="1"/>
+</WINDOW>
+</WINDOW>
+</JZML>
