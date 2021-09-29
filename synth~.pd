@@ -159,11 +159,11 @@
 #X obj 154 12 hsl 197 15 0 1 0 0 \$0-wf_slider \$0-wf_slider-set empty
 -2 -8 0 10 -191407 -261682 -1 0 1;
 #X obj 355 31 vsl 25 80 0 1 0 0 \$0-ringmod \$0-ringmod-set empty 0
--9 0 10 -191407 -262130 -1 1100 1;
+-9 0 10 -191407 -262130 -1 0 1;
 #X obj 382 31 vsl 20 80 0 1 0 0 \$0-rm_fm \$0-rm_fm-set empty 0 -9
-0 10 -191407 -228856 -1 4600 1;
+0 10 -191407 -228856 -1 0 1;
 #X obj 404 31 vsl 20 80 0 1 0 0 \$0-bit_rate \$0-bit_rate-set empty
-0 -9 0 10 -203890 -245500 -1 4100 1;
+0 -9 0 10 -203890 -245500 -1 0 1;
 #X obj 12 14 vsl 20 97 0 1 0 0 \$0-adsr_attack \$0-adsr_attack-set
 empty 0 -9 0 10 -191407 -262144 -1 0 1;
 #X obj 51 14 vsl 20 97 0 1 0 0 \$0-adsr_decay \$0-adsr_decay-set empty
@@ -179,7 +179,7 @@ empty 0 -9 0 10 -208051 -228856 -1 4800 1;
 #X obj 134 14 vsl 15 97 0 1 0 0 \$0-adsr_release_curve \$0-adsr_release_curve-set
 empty 0 -9 0 10 -208051 -228856 -1 4800 1;
 #X obj 358 12 hsl 64 15 0 1 0 0 \$0-ring_spread \$0-ring_spread-set
-empty -2 -8 0 10 -191407 -216764 -1 3400 1;
+empty -2 -8 0 10 -191407 -216764 -1 0 1;
 #X obj 426 14 vsl 20 97 0 1 0 0 \$0-delay_time \$0-delay_time-set empty
 0 -9 0 10 -191407 -191936 -1 0 1;
 #X obj 448 14 vsl 20 97 0 1 0 0 \$0-delay_gain \$0-delay_gain-set empty
@@ -520,15 +520,15 @@ empty 0 -9 0 10 -208051 -233441 -1 0 1;
 #X obj 232 153 vsl 15 67 0 1 0 0 \$0-pitch_octave \$0-pitch_octave-set
 empty 0 -9 0 10 -220534 -262144 -1 3300 1;
 #X obj 249 153 vsl 15 67 0 1 0 0 \$0-pitch_detune \$0-pitch_detune-set
-empty 0 -9 0 10 -228856 -162280 -1 0 1;
+empty 0 -9 0 10 -228856 -162280 -1 660 1;
 #X obj 419 130 bng 19 250 50 0 \$0-mono_button \$0-mono_button-set
-p8 2 9 0 14 -262144 -1 -1;
+m 6 9 0 14 -262144 -1 -1;
 #X obj 461 130 bng 19 250 50 0 \$0-open_settings \$0-open_settings-set
 ... 4 8 1 14 -262144 -1 -1;
 #X obj 440 130 bng 19 1000 50 0 \$0-init \$0-init-set init 3 11 1 10
 -128992 -262144 -262144;
 #X obj 24 130 bng 19 250 50 0 \$0-wf0_bang \$0-wf0_bang-set wf 2 11
-1 14 -199729 -228856 -229352;
+1 14 -199729 -228856 -262144;
 #X obj 45 130 bng 19 250 50 0 \$0-tf0_bang \$0-tf0_bang-set tf 5 11
 1 14 -199729 -228856 -262144;
 #X obj 66 130 bng 19 250 50 0 \$0-rm0_bang \$0-rm0_bang-set rm 1 11
