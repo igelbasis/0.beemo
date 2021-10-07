@@ -1,9 +1,10 @@
-#N canvas 528 456 886 624 12;
+#N canvas 912 294 1008 546 12;
 #X declare -path ../lib;
 #X declare -path objects;
 #X declare -path cadsr;
-#X obj 35 364 out1~;
-#X obj 42 28 tgl 32 0 empty \$0-pseudo_toggle-set empty 17 7 0 10 -262144
+#X declare -path ../1.OBJECTS;
+#X obj 40 363 out1~;
+#X obj 47 27 tgl 32 0 empty \$0-pseudo_toggle-set empty 17 7 0 10 -262144
 -1 -1 0 1;
 #N canvas 186 267 744 562 pseudo_seq 0;
 #X obj 102 263 random 8;
@@ -44,13 +45,14 @@
 #X connect 13 0 14 0;
 #X connect 15 0 16 1;
 #X connect 16 0 11 1;
-#X restore 37 67 pd pseudo_seq;
-#X floatatom 81 33 5 0 999 0 - #0-bpm-set -;
-#N canvas 627 219 218 71 ... 0;
+#X restore 42 66 pd pseudo_seq;
+#X floatatom 86 32 5 0 999 0 - #0-bpm-set -;
+#N canvas 523 644 218 71 ... 0;
 #N canvas 593 301 384 171 declarations_and_tables 0;
 #X obj 43 36 declare -path ../lib;
 #X obj 43 61 declare -path objects;
 #X obj 43 86 declare -path cadsr;
+#X obj 43 111 declare -path ../1.OBJECTS;
 #X restore 10 11 pd declarations_and_tables;
 #N canvas 793 607 382 196 init 0;
 #X msg 23 74 0;
@@ -68,10 +70,10 @@
 #X connect 7 0 0 0;
 #X connect 7 0 1 0;
 #X restore 10 33 pd init;
-#X restore 120 33 pd ...;
-#X obj 134 55 bng 32 250 50 0 \$0-init \$0-init-set empty 17 7 0 10
+#X restore 125 32 pd ...;
+#X obj 139 54 bng 32 250 50 0 \$0-init \$0-init-set empty 17 7 0 10
 -262144 -1 -1;
-#X obj 49 89 synth~ \$0 1;
+#X obj 54 88 synth~ \$0 1;
 #X connect 1 0 2 0;
 #X connect 2 0 6 0;
 #X connect 3 0 2 1;

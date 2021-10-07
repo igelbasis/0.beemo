@@ -1,0 +1,67 @@
+#N canvas 0 467 1278 603 12;
+#X obj 110 148 s \$0-cnv;
+#X msg 162 41 size 8;
+#X obj 13 19 bng 10 250 50 0 \$0-button \$0-button-set empty 17 7 0
+10 -262144 -1 -1;
+#X obj 12 12 cnv 8 11 17 empty \$0-cnv wf 0 15 1 10 -228856 -128992
+0;
+#X obj 263 46 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 263 66 symbol \$4;
+#X msg 263 90 label \$1;
+#X obj 14 14 cnv 2 8 3 empty \$0-led empty 1 14 1 12 -262093 -262144
+0;
+#X obj 497 166 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 497 186 symbol \$4;
+#X msg 501 134 label_font 1 12;
+#X msg 502 235 label_pos 1 14;
+#X obj 344 268 s \$0-led;
+#X msg 497 210 label empty;
+#X obj 73 230 r \$0-button;
+#X obj 73 255 f;
+#X obj 73 280 + 1;
+#X obj 73 305 % 2;
+#X obj 652 84 sel 0 1;
+#X obj 524 29 loadbang;
+#X obj 73 330 s \$2-mode\$3_\$4-set;
+#X obj 652 59 r \$2-mode\$3_\$4;
+#X obj 107 255 r \$2-mode\$3_\$4;
+#X msg 643 113 color #dfdfdf #ffffff #ffffff, f 7;
+#X msg 386 11 color #dfdfdf #ffffff #7c7c7c, f 7;
+#X msg 720 108 color #feff30 #ffffff #ffffff, f 7;
+#X floatatom 43 181 5 0 0 0 - #2-mode#3_#4-set #2-mode#3_#4;
+#X msg 145 19 vis_size 11 17;
+#X msg 267 14 label_font 1 10;
+#X msg 268 115 label_pos 0 15;
+#X msg 396 161 size 2;
+#X msg 416 181 size 10;
+#X msg 379 139 vis_size 8 3;
+#X connect 1 0 0 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 0 0;
+#X connect 8 0 9 0;
+#X connect 9 0 13 0;
+#X connect 10 0 12 0;
+#X connect 11 0 12 0;
+#X connect 13 0 12 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 20 0;
+#X connect 18 0 23 0;
+#X connect 18 1 25 0;
+#X connect 19 0 4 0;
+#X connect 21 0 18 0;
+#X connect 22 0 15 1;
+#X connect 23 0 12 0;
+#X connect 24 0 0 0;
+#X connect 25 0 12 0;
+#X connect 27 0 0 0;
+#X connect 28 0 0 0;
+#X connect 29 0 0 0;
+#X connect 30 0 12 0;
+#X connect 31 0 12 0;
+#X connect 32 0 12 0;
+#X coords 0 -1 1 1 15 21 2 10 10;

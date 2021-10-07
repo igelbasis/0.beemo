@@ -10,7 +10,7 @@
 #X coords 0 7 14 0 60 30 1 0 0;
 #X restore 347 80 graph;
 #X obj 142 21 bng 25 250 50 0 \$0-direction_button \$0-direction_button-set
-dn 3 13 0 16 -212212 -228856 -262139;
+empty 3 13 0 16 -212212 -228856 -262139;
 #X floatatom 361 118 5 0 0 0 - #1-step#2-set #1-step#2;
 #X obj 519 31 loadbang;
 #N canvas 0 105 450 300 style 0;
@@ -85,8 +85,8 @@ dn 3 13 0 16 -212212 -228856 -262139;
 #X connect 6 0 7 0;
 #X connect 6 1 1 0;
 #X restore 271 115 pd init;
-#N canvas 337 307 354 443 sequencer 0;
-#N canvas 759 219 1361 1133 read_table 0;
+#N canvas 337 403 354 443 sequencer 0;
+#N canvas 559 59 1361 1133 read_table 0;
 #X obj 165 60 inlet clock;
 #X obj 172 163 f;
 #X obj 172 188 + 1;
@@ -182,7 +182,7 @@ dn 3 13 0 16 -212212 -228856 -262139;
 #X connect 8 0 2 1;
 #X connect 10 0 0 0;
 #X restore 271 137 pd sequencer;
-#N canvas 68 264 338 315 msg 0;
+#N canvas 68 296 338 315 msg 0;
 #X obj 57 27 r \$1-msg;
 #X obj 57 52 route x8_step\$2;
 #X obj 57 77 list split 8;

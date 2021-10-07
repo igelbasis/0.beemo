@@ -1,7 +1,8 @@
-#N canvas 196 59 1471 953 12;
+#N canvas 220 59 1471 953 12;
 #X declare -path ../lib;
 #X declare -path objects;
 #X declare -path cadsr;
+#X declare -path ../1.OBJECTS;
 #X obj 359 801 out1~;
 #X obj 359 30 tgl 32 0 empty \$0-pseudo_toggle-set empty 17 7 0 10
 -262144 -1 -1 0 1;
@@ -46,11 +47,12 @@
 #X connect 16 0 11 1;
 #X restore 359 64 pd pseudo_seq;
 #X floatatom 403 29 5 0 999 1 bpm #0-bpm-set -;
-#N canvas 925 833 237 160 ... 0;
+#N canvas 655 451 237 160 ... 0;
 #N canvas 515 469 384 171 declarations_and_tables 0;
 #X obj 43 36 declare -path ../lib;
 #X obj 43 61 declare -path objects;
 #X obj 43 86 declare -path cadsr;
+#X obj 43 111 declare -path ../1.OBJECTS;
 #X restore 10 11 pd declarations_and_tables;
 #N canvas 471 478 702 288 init 0;
 #X msg 220 130 0;
@@ -96,23 +98,19 @@
 #X coords 0 -1 1 1 300 70 2 10 10;
 #X restore 584 166 pd ADSR_CURVES_display;
 #X text 358 234 [a1.......a7];
-#X text 594 48 a continous ramp (0..1) reads the index of a [wavetable]
-and its output reads the index of the [transferfunction]. You can slide
-through 4 different wavetables and 2 different transferfunctions.,
-f 31;
 #X text 702 236 [ringmod];
 #X text 772 236 [delay];
 #N canvas 248 179 1124 816 MOD_SEQUENCER 0;
 #X text 53 12 __MOD_SEQUENCER_______________________;
-#X text 50 123 up....(count 0..7 upwards) \, dn....(count 7..0 down)
-\, ud....(count 0..7..0) \, du....(count 7..0..7), f 27;
 #X text 284 11 --->>;
 #X text 11 30 (wf).............browse [wavetable] \; (tf).............browse
 [transferfunction] \; (rm).............modulate ringmod_pitch \; [8
-faders].......table (0..1) \; [thick fader]....smooth steps (0..4800s)
-\; (button).........counter direction, f 44;
+faders].......table (0..1) \; [thick fader]....smooth steps (0..4800ms)
+\; (button).........counter direction;
+#X text 50 123 up....(count 0..7) \, dn....(count 7..0) \, ud....(count
+0..7..0) \, du....(count 7..0..7), f 27;
 #X coords 0 -1 1 1 320 180 2 10 10;
-#X restore 37 363 pd MOD_SEQUENCER;
+#X restore 35 360 pd MOD_SEQUENCER;
 #X text 520 459 [p1.....p5];
 #X text 600 460 [presets];
 #X text 822 374 [other settings];
@@ -146,16 +144,21 @@ with 9 presets \, (red button)......save the entire table to a file
 autosave \, change pitch from different tuning tables, f 34;
 #X coords 0 -1 1 1 270 180 2 10 10;
 #X restore 823 376 pd ADSR_display;
-#X text 837 234 __RINGMOD____________________________;
 #N canvas 598 696 377 121 ADSR_CURVES_display 0;
 #X text 14 12 __DELAY_____________________;
 #X text 11 31 [delay_time] 0..2000ms \, [delay_gain] 0..1, f 24;
 #X coords 0 -1 1 1 210 60 2 10 10;
 #X restore 825 314 pd ADSR_CURVES_display;
-#X text 824 248 top slider.....bitcrush of the ringmod-oscillator \,
+#X text 825 699 top slider.....bitcrush of the ringmod-oscillator \,
 1st fader.......ringmodulator (0..8xpitch) \, 2nd fader.......bitcrush
-bit depth (2..24 bit) \, 3rd fader.......bitcrush samplerate (100..44100Hz)
-, f 52;
+bit depth (2..24 bit) \, 3rd fader.......e (100..44100Hz), f 53;
+#X text 586 35 A continous ramp (0..1) reads the index of a [wavetable]
+and its output reads the index of the [transferfunction]. You can slide
+through 4 different wavetables and 2 different transferfunctions for
+more timbral change., f 31;
+#X text 837 234 __DISTORTION______________________________;
+#X text 831 256 1st Fader(yellow)......ringmodulation frequency (1..8x
+of pitch) \, 2nd Fader.............., f 67;
 #X connect 1 0 2 0;
 #X connect 2 0 5 0;
 #X connect 3 0 2 1;
