@@ -1,4 +1,4 @@
-#N canvas 296 619 855 511 12;
+#N canvas 296 569 855 511 12;
 #X msg 222 17 mod_button \$0 \$1 \$2 wf;
 #X obj 10 10 mod_button \$0 \$1 \$2 wf;
 #X obj 27 10 mod_button \$0 \$1 \$2 tf;

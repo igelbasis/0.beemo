@@ -1,7 +1,7 @@
-#N canvas 281 408 998 662 12;
+#N canvas 217 418 998 662 12;
 #X obj 131 134 cnv 15 100 60 empty empty BMO\$2 20 12 1 40 -262144
 -162280 0;
-#N canvas 520 530 1118 540 display 0;
+#N canvas 437 431 1118 540 display 0;
 #X obj 153 31 cnv 15 96 64 empty empty empty 20 12 0 14 -245498 -66577
 0;
 #X obj 255 31 cnv 15 96 64 empty empty empty 20 12 0 14 -249596 -66577
@@ -184,7 +184,7 @@ empty -2 -8 0 10 -191407 -216764 -1 0 1;
 0 -9 0 10 -191407 -191936 -1 0 1;
 #X obj 448 14 vsl 20 97 0 1 0 0 \$0-delay_gain \$0-delay_gain-set empty
 0 -9 0 10 -195568 -191936 -1 0 1;
-#N canvas 1133 468 447 320 \$0-settings 0;
+#N canvas 1279 351 447 320 \$0-settings 0;
 #N canvas 343 273 1222 736 pd_settings_display 0;
 #X obj 22 22 wave_table \$0 0;
 #X obj 88 22 wave_table \$0 1;
@@ -439,6 +439,7 @@ empty 17 7 0 10 -262144 -1 -1 0 1;
 #X obj 384 249 s \$0-ring_spread-set;
 #X obj 224 281 r \$0-mod_bc;
 #X obj 224 306 s \$0-bit_rate-set;
+#X obj 57 374 s \$0-wf_slider-set;
 #X connect 20 0 21 0;
 #X connect 21 0 22 0;
 #X connect 22 0 23 0;
@@ -466,7 +467,7 @@ empty 17 7 0 10 -262144 -1 -1 0 1;
 17 7 0 10 -237435 -191407 -1;
 #X obj 287 130 bng 19 250 50 0 \$0-save_file \$0-save_file-set empty
 17 7 0 10 -261885 -191407 -1;
-#N canvas 969 59 941 529 preset 0;
+#N canvas 778 10 1034 745 preset 0;
 #X obj 40 100 bng 17 250 44 0 \$0-write_preset \$0-write_preset-set
 s 4 8 0 18 -228856 -128992 -240104;
 #X obj 40 117 cnv 15 55 55 empty \$0-preset_bg empty 20 12 0 14 -262144
@@ -968,7 +969,7 @@ inv_ex30.wav \; chebchev3_U.wav \; chebchev4_U.wav \; chebchev5_U.wav
 #X connect 14 0 11 0;
 #X connect 15 0 11 0;
 #X restore 490 92 pd mono;
-#N canvas 0 59 1227 684 open_save 0;
+#N canvas 415 95 1505 985 open_save 0;
 #X msg 64 87 dir;
 #X obj 64 112 pdcontrol;
 #X msg 64 137 symbol \$1/presets;
@@ -1029,6 +1030,14 @@ inv_ex30.wav \; chebchev3_U.wav \; chebchev4_U.wav \; chebchev5_U.wav
 -1 -1;
 #X obj 745 84 spigot;
 #X obj 903 93 r \$0-autosave;
+#X msg 541 767 symbol init;
+#X obj 490 95 r \$0-msg;
+#X obj 490 120 route open;
+#X msg 493 150 symbol \$1;
+#X obj 495 237 del 100;
+#X msg 495 262 0;
+#X obj 495 287 s \$0-preset_bank-set;
+#X obj 493 175 t b s;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -1076,6 +1085,14 @@ inv_ex30.wav \; chebchev3_U.wav \; chebchev4_U.wav \; chebchev5_U.wav
 #X connect 47 0 37 0;
 #X connect 48 0 34 0;
 #X connect 49 0 48 1;
+#X connect 50 0 31 0;
+#X connect 51 0 52 0;
+#X connect 52 0 53 0;
+#X connect 53 0 57 0;
+#X connect 54 0 55 0;
+#X connect 55 0 56 0;
+#X connect 57 0 54 0;
+#X connect 57 1 31 0;
 #X restore 490 136 pd open_save;
 #N canvas 908 629 446 441 matrix 0;
 #X obj 48 55 mx \$0 0 wf;

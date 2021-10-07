@@ -1,4 +1,4 @@
-#N canvas 0 467 1278 603 12;
+#N canvas 632 353 1278 603 12;
 #X obj 110 148 s \$0-cnv;
 #X msg 162 41 size 8;
 #X obj 13 19 bng 10 250 50 0 \$0-button \$0-button-set empty 17 7 0
@@ -9,7 +9,7 @@
 -1;
 #X obj 263 66 symbol \$4;
 #X msg 263 90 label \$1;
-#X obj 14 14 cnv 2 8 3 empty \$0-led empty 1 14 1 12 -262093 -262144
+#X obj 14 14 cnv 2 8 3 empty \$0-led empty 1 14 1 12 -228856 -262144
 0;
 #X obj 497 166 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
