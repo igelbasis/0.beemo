@@ -1,4 +1,4 @@
-#N canvas 364 24 1261 792 12;
+#N canvas 364 59 1261 792 12;
 #X declare -path ../lib;
 #X declare -path objects;
 #X declare -path cadsr;
