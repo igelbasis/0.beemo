@@ -1,4 +1,4 @@
-#N canvas 364 59 1261 792 12;
+#N canvas 625 131 689 529 12;
 #X declare -path ../lib;
 #X declare -path objects;
 #X declare -path cadsr;
@@ -6,7 +6,7 @@
 #X obj 40 363 out1~;
 #X obj 47 27 tgl 32 0 empty \$0-pseudo_toggle-set empty 17 7 0 10 -262144
 -1 -1 0 1;
-#N canvas 186 267 744 562 pseudo_seq 0;
+#N canvas 99 208 744 562 pseudo_seq 0;
 #X obj 102 263 random 8;
 #X obj 102 288 map;
 #X msg 177 266 0 2 4 5 7 9 11;
