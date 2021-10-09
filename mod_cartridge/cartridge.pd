@@ -8,4 +8,4 @@
 #X obj 116 30 cartridge_bit \$0 \$1 5;
 #X obj 132 30 cartridge_bit \$0 \$1 6;
 #X obj 150 30 cartridge_bit \$0 \$1 7;
-#X coords 0 -1 1 1 136 66 2 30 30;
+#X coords 0 -1 1 1 136 106 2 30 30;

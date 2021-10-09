@@ -1,87 +1,49 @@
 #N canvas 0 59 1257 896 12;
-#X obj 33 337 f;
-#X obj 33 362 + 1;
-#X obj 33 387 % 5;
-#X obj 290 24 r \$0-select_toggle;
-#X obj 290 89 == 0;
-#X obj 330 89 == 1;
-#X obj 370 89 == 2;
-#X obj 410 89 == 3;
-#X obj 65 338 r \$0-smooth0;
-#X obj 33 411 s \$0-smooth0-set;
-#X obj 193 337 f;
-#X obj 193 362 + 1;
-#X obj 193 387 % 5;
-#X obj 343 337 f;
-#X obj 343 362 + 1;
-#X obj 343 387 % 5;
-#X obj 503 337 f;
-#X obj 503 362 + 1;
-#X obj 503 387 % 5;
-#X obj 225 338 r \$0-smooth1;
-#X obj 193 411 s \$0-smooth1-set;
-#X obj 375 338 r \$0-smooth2;
-#X obj 343 411 s \$0-smooth2-set;
-#X obj 535 338 r \$0-smooth3;
-#X obj 503 411 s \$0-smooth3-set;
-#X obj 33 297 spigot;
-#X obj 192 297 spigot;
-#X obj 342 297 spigot;
-#X obj 502 297 spigot;
-#X obj 700 24 r \$0-select_toggle;
-#X obj 710 102 r \$0-smooth0;
-#X obj 830 102 r \$0-smooth1;
-#X obj 950 102 r \$0-smooth2;
-#X obj 1070 102 r \$0-smooth3;
-#X obj 700 49 sel 0 1 2 3;
-#X obj 692 239 f;
-#X obj 812 239 f;
-#X obj 932 239 f;
-#X obj 1052 239 f;
-#X obj 27 22 r \$0-smooth;
-#X obj 714 364 s \$0-smooth-set;
-#X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X connect 2 0 9 0;
-#X connect 3 0 4 0;
-#X connect 3 0 5 0;
-#X connect 3 0 7 0;
-#X connect 3 0 6 0;
-#X connect 4 0 25 1;
-#X connect 5 0 26 1;
-#X connect 6 0 27 1;
-#X connect 7 0 28 1;
-#X connect 8 0 0 1;
-#X connect 10 0 11 0;
-#X connect 11 0 12 0;
-#X connect 12 0 20 0;
-#X connect 13 0 14 0;
-#X connect 14 0 15 0;
-#X connect 15 0 22 0;
-#X connect 16 0 17 0;
-#X connect 17 0 18 0;
-#X connect 18 0 24 0;
-#X connect 19 0 10 1;
-#X connect 21 0 13 1;
-#X connect 23 0 16 1;
-#X connect 25 0 0 0;
-#X connect 26 0 10 0;
-#X connect 27 0 13 0;
-#X connect 28 0 16 0;
-#X connect 29 0 34 0;
-#X connect 30 0 35 1;
-#X connect 31 0 36 1;
-#X connect 32 0 37 1;
-#X connect 33 0 38 1;
-#X connect 34 0 35 0;
-#X connect 34 1 36 0;
-#X connect 34 2 37 0;
-#X connect 34 3 38 0;
-#X connect 35 0 40 0;
-#X connect 36 0 40 0;
-#X connect 37 0 40 0;
-#X connect 38 0 40 0;
-#X connect 39 0 25 0;
-#X connect 39 0 26 0;
-#X connect 39 0 28 0;
-#X connect 39 0 27 0;
+#X obj 301 59 tgl 17 0 \$0-mod_wf0 \$0-mod_wf0-set empty 17 7 0 10
+-187246 -262144 -228856 0 1;
+#X obj 321 59 tgl 17 0 \$0-mod_tf0 \$0-mod_tf0-set empty 17 7 0 10
+-187246 -262144 -228856 0 1;
+#X obj 341 59 tgl 17 0 \$0-mod_ra0 \$0-mod_ra0-set empty 17 7 0 10
+-187246 -262144 -228856 0 1;
+#X obj 361 59 tgl 17 0 \$0-mod_rb0 \$0-mod_rb0-set empty 17 7 0 10
+-187246 -262144 -228856 0 1;
+#X obj 381 59 tgl 17 0 \$0-mod_oc0 \$0-mod_oc0-set empty 17 7 0 10
+-187246 -262144 -228856 0 1;
+#X obj 401 59 tgl 17 0 \$0-mod_bc0 \$0-mod_bc0-set empty 17 7 0 10
+-187246 -262144 -228856 0 1;
+#X obj 301 79 tgl 17 0 \$0-mod_wf1 \$0-mod_wf1-set empty 17 7 0 10
+-216373 -257985 -228856 0 1;
+#X obj 321 79 tgl 17 0 \$0-mod_tf1 \$0-mod_tf1-set empty 17 7 0 10
+-216373 -257985 -228856 0 1;
+#X obj 341 79 tgl 17 0 \$0-mod_ra1 \$0-mod_ra1-set empty 17 7 0 10
+-216373 -257985 -228856 0 1;
+#X obj 361 79 tgl 17 0 \$0-mod_rb1 \$0-mod_rb1-set empty 17 7 0 10
+-216373 -257985 -228856 0 1;
+#X obj 381 79 tgl 17 0 \$0-mod_oc1 \$0-mod_oc1-set empty 17 7 0 10
+-216373 -257985 -228856 0 1;
+#X obj 401 79 tgl 17 0 \$0-mod_bc1 \$0-mod_bc1-set empty 17 7 0 10
+-216373 -257985 -228856 0 1;
+#X obj 301 99 tgl 17 0 \$0-mod_wf2 \$0-mod_wf2-set empty 17 7 0 10
+-233017 -133153 -228856 0 1;
+#X obj 321 99 tgl 17 0 \$0-mod_tf2 \$0-mod_tf2-set empty 17 7 0 10
+-233017 -133153 -228856 0 1;
+#X obj 341 99 tgl 17 0 \$0-mod_ra2 \$0-mod_ra2-set empty 17 7 0 10
+-233017 -133153 -228856 0 1;
+#X obj 361 99 tgl 17 0 \$0-mod_rb2 \$0-mod_rb2-set empty 17 7 0 10
+-233017 -133153 -228856 0 1;
+#X obj 381 99 tgl 17 0 \$0-mod_oc2 \$0-mod_oc2-set empty 17 7 0 10
+-233017 -133153 -228856 0 1;
+#X obj 401 99 tgl 17 0 \$0-mod_bc2 \$0-mod_bc2-set empty 17 7 0 10
+-233017 -133153 -228856 0 1;
+#X obj 301 119 tgl 17 0 \$0-mod_wf3 \$0-mod_wf3-set empty 17 7 0 10
+-249661 -227296 -228856 0 1;
+#X obj 321 119 tgl 17 0 \$0-mod_tf3 \$0-mod_tf3-set empty 17 7 0 10
+-249661 -227296 -228856 0 1;
+#X obj 341 119 tgl 17 0 \$0-mod_ra3 \$0-mod_ra3-set empty 17 7 0 10
+-249661 -227296 -228856 0 1;
+#X obj 361 119 tgl 17 0 \$0-mod_rb3 \$0-mod_rb3-set empty 17 7 0 10
+-249661 -227296 -228856 0 1;
+#X obj 381 119 tgl 17 0 \$0-mod_oc3 \$0-mod_oc3-set empty 17 7 0 10
+-249661 -227296 -228856 0 1;
+#X obj 401 119 tgl 17 0 \$0-mod_bc3 \$0-mod_bc3-set empty 17 7 0 10
+-249661 -227296 -228856 0 1;

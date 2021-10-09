@@ -1,0 +1,55 @@
+#N canvas 215 518 733 562 12;
+#X obj 13 12 bng 17 250 50 0 \$0-button \$0-button-set empty 17 7 0
+10 -262144 -1 -1;
+#X obj 13 29 bng 17 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 57 14 tgl 15 0 \$0-toggle \$0-toggle-set empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 101 12 r \$0-button;
+#X obj 101 37 f;
+#X obj 101 62 + 1;
+#X obj 101 87 % 2;
+#X obj 101 112 s \$0-toggle-set;
+#X obj 132 36 r \$0-toggle;
+#N canvas 513 59 624 627 col 0;
+#X obj 297 109 sel 0 1 2 3;
+#X msg 270 155 symbol #ffffff;
+#X msg 305 183 symbol #e9fcb0;
+#X msg 333 209 symbol #bbbbbb;
+#X msg 364 236 symbol #e6bbbb;
+#X obj 288 351 symbol;
+#X obj 177 104 sel 0 1;
+#X msg 177 351 symbol #7c7cd0;
+#X msg 177 406 color \$1 \$1;
+#X obj 177 431 s \$0-led;
+#X obj 177 79 r \$0-toggle;
+#X floatatom 394 79 5 0 0 0 - - -;
+#X obj 394 54 r \$2-select_toggle;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 0 2 3 0;
+#X connect 0 3 4 0;
+#X connect 1 0 5 1;
+#X connect 2 0 5 1;
+#X connect 3 0 5 1;
+#X connect 4 0 5 1;
+#X connect 5 0 8 0;
+#X connect 6 0 7 0;
+#X connect 6 1 5 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 10 0 6 0;
+#X connect 12 0 0 0;
+#X connect 12 0 11 0;
+#X restore 225 10 pd col;
+#X obj 11 11 cnv 6 21 35 empty empty empty 2 12 1 18 -129013 -66577
+0;
+#X obj 13 13 cnv 6 17 8 empty \$0-led empty 2 12 1 18 -129013 -66577
+0;
+#X connect 1 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 8 0 4 1;
+#X coords 0 -1 1 1 23 37 2 10 10;
