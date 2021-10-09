@@ -1,5 +1,4 @@
-#N canvas 0 153 886 620 12;
-#X obj 181 98 inlet;
+#N canvas 671 376 886 620 12;
 #X obj 181 165 t f f;
 #X obj 181 191 % 3;
 #X obj 187 214 div 3;
@@ -74,24 +73,25 @@
 #X connect 24 0 25 0;
 #X connect 25 0 27 0;
 #X restore 271 119 pd output;
-#X obj 271 226 outlet;
-#X obj 22 22 hradio 17 1 0 3 \$0-1 \$0-1-set empty 0 -8 0 10 -245500
+#X obj 22 22 hradio 21 1 0 3 \$0-1 \$0-1-set empty 0 -8 0 10 -245500
 -223069 -245500 0;
-#X obj 22 39 hradio 17 1 0 3 \$0-2 \$0-2-set empty 0 -8 0 10 -245500
--245500 -245500 0;
-#X obj 22 56 hradio 17 1 0 3 \$0-3 \$0-3-set empty 0 -8 0 10 -245500
--245500 -245500 2;
-#X connect 0 0 10 0;
-#X connect 1 0 2 0;
-#X connect 1 1 3 0;
-#X connect 2 0 5 0;
-#X connect 3 0 4 0;
-#X connect 4 0 6 0;
-#X connect 4 1 9 0;
+#X obj 22 43 hradio 21 1 0 3 \$0-2 \$0-2-set empty 0 -8 0 10 -245500
+-245500 -245500 1;
+#X obj 22 63 hradio 21 1 0 3 \$0-3 \$0-3-set empty 0 -8 0 10 -245500
+-245500 -245500 1;
+#X obj 181 98 r \$1-\$2-set;
+#X obj 271 226 s \$1-\$2;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 1 0 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 3 1 8 0;
+#X connect 5 0 6 0;
 #X connect 6 0 7 0;
-#X connect 7 0 8 0;
-#X connect 8 0 5 1;
-#X connect 9 0 7 1;
-#X connect 10 0 1 0;
-#X connect 11 0 12 0;
-#X coords 0 -1 1 1 55 55 2 20 20;
+#X connect 7 0 4 1;
+#X connect 8 0 6 1;
+#X connect 9 0 0 0;
+#X connect 10 0 15 0;
+#X connect 14 0 9 0;
+#X coords 0 -1 1 1 67 66 2 20 20;
