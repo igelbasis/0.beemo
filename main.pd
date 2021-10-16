@@ -1,11 +1,11 @@
-#N canvas 518 176 1008 660 12;
+#N canvas 538 59 1008 660 12;
 #X declare -path ../lib;
 #X declare -path objects;
 #X declare -path cadsr;
 #X declare -path ../1.OBJECTS;
 #X declare -path mod_cartridge;
 #X obj 83 507 out1~;
-#N canvas 95 920 218 71 ... 0;
+#N canvas 390 999 218 71 ... 0;
 #N canvas 593 301 358 223 declarations_and_tables 0;
 #X obj 43 36 declare -path ../lib;
 #X obj 43 61 declare -path objects;
@@ -64,10 +64,10 @@
 #X msg 427 246 -1 2 7 11 14 18 19;
 #X msg 463 326 -1 2 5 8 11 14 23;
 #X obj 480 64 hradio 15 1 0 6 \$0-progression \$0-progression-set empty
-0 -8 0 10 -262144 -1 -1 2;
+0 -8 0 10 -262144 -1 -1 4;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array \$0-random 6 float 3;
-#A 0 178.571 457.143 750 121.429 407.143 85.7143;
+#A 0 850 7.14471 564.286 214.286 364.286 7.14313;
 #X coords 0 1000 6 0 200 140 1 0 0;
 #X restore 670 74 graph;
 #X obj 332 463 r \$0-clock;
@@ -129,9 +129,9 @@
 #X obj 415 84 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 80 46 hradio 17 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
--1 2;
+-1 7;
 #X floatatom 590 12 5 0 999 1 bpm #0-bpm-set #0-bpm;
-#N canvas 143 102 419 719 bpm.pres 0;
+#N canvas 143 102 419 719 bpm.pres 1;
 #X obj 74 26 inlet;
 #X obj 79 354 outlet;
 #X msg 186 141 120;
