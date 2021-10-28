@@ -1,17 +1,20 @@
-#N canvas 538 59 1008 660 12;
+#N canvas 538 59 1046 858 12;
 #X declare -path ../lib;
 #X declare -path objects;
 #X declare -path cadsr;
 #X declare -path ../1.OBJECTS;
 #X declare -path mod_cartridge;
-#X obj 83 507 out1~;
-#N canvas 390 999 218 71 ... 0;
+#X declare -path ../0.Mixer;
+#X declare -path ../abstractions;
+#N canvas 390 565 218 71 ... 1;
 #N canvas 593 301 358 223 declarations_and_tables 0;
 #X obj 43 36 declare -path ../lib;
 #X obj 43 61 declare -path objects;
 #X obj 43 86 declare -path cadsr;
 #X obj 43 111 declare -path ../1.OBJECTS;
 #X obj 43 136 declare -path mod_cartridge;
+#X obj 43 161 declare -path ../0.Mixer;
+#X obj 43 186 declare -path ../abstractions;
 #X restore 10 11 pd declarations_and_tables;
 #N canvas 793 607 382 196 init 0;
 #X msg 23 74 0;
@@ -32,12 +35,10 @@
 #X restore 401 23 pd ...;
 #X obj 415 45 bng 32 250 50 0 \$0-init \$0-init-set empty 17 7 0 10
 -262144 -1 -1;
-#X obj 82 306 synth~ \$0 1;
-#X obj 202 185 mod_cart;
-#X obj 119 133 r \$0-clock;
+#X obj 139 374 synth~ \$0 1;
 #X obj 28 44 tgl 32 0 empty \$0-pseudo_toggle-set empty 17 7 0 10 -262144
--1 -1 1 1;
-#N canvas 186 59 1070 813 pseudo_seq 0;
+-1 -1 0 1;
+#N canvas 316 267 1070 813 pseudo_seq 0;
 #X obj 102 263 random 8;
 #X obj 102 288 map;
 #X msg 177 266 0 2 4 5 7 9 11;
@@ -67,7 +68,7 @@
 0 -8 0 10 -262144 -1 -1 4;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array \$0-random 6 float 3;
-#A 0 850 7.14471 564.286 214.286 364.286 7.14313;
+#A 0 942.857 71.4287 71.4286 385.714 657.143 114.286;
 #X coords 0 1000 6 0 200 140 1 0 0;
 #X restore 670 74 graph;
 #X obj 332 463 r \$0-clock;
@@ -80,6 +81,8 @@
 #X obj 327 656 array random \$0-random;
 #X obj 327 681 s \$0-progression-set;
 #X obj 382 536 random 14;
+#X msg 748 307 const 0;
+#X obj 748 332 s \$0-random;
 #X connect 0 0 1 0;
 #X connect 1 0 4 0;
 #X connect 2 0 1 1;
@@ -123,15 +126,14 @@
 #X connect 32 0 35 0;
 #X connect 33 0 34 0;
 #X connect 35 0 30 1;
+#X connect 36 0 37 0;
 #X restore 56 106 pd pseudo_seq;
-#X obj 275 46 r \$0-link;
-#X obj 275 71 print link;
 #X obj 415 84 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 80 46 hradio 17 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
--1 7;
-#X floatatom 590 12 5 0 999 1 bpm #0-bpm-set #0-bpm;
-#N canvas 143 102 419 719 bpm.pres 1;
+-1 6;
+#X floatatom 98 14 5 0 999 1 bpm #0-bpm-set #0-bpm;
+#N canvas 273 269 419 719 bpm.pres 0;
 #X obj 74 26 inlet;
 #X obj 79 354 outlet;
 #X msg 186 141 120;
@@ -163,12 +165,14 @@
 #X connect 10 7 9 0;
 #X connect 11 0 1 0;
 #X restore 88 67 pd bpm.pres;
-#X connect 3 0 0 0;
-#X connect 4 0 3 0;
-#X connect 5 0 4 0;
-#X connect 6 0 7 0;
-#X connect 7 0 3 0;
-#X connect 8 0 9 0;
-#X connect 8 0 4 0;
-#X connect 11 0 13 0;
-#X connect 13 0 7 1;
+#X obj 266 665 3x_mixer \$0;
+#X obj 139 489 throw~ \$0-channel_1;
+#X obj 182 175 synth~ \$0 2;
+#X obj 182 290 throw~ \$0-channel_2;
+#X connect 2 0 10 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 4 0 11 0;
+#X connect 6 0 8 0;
+#X connect 8 0 4 1;
+#X connect 11 0 12 0;

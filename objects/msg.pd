@@ -1,0 +1,10 @@
+#N canvas 740 424 285 240 12;
+#X obj 47 22 r \$2-msg;
+#X obj 39 86 route synth\$3;
+#X obj 39 111 route \$4;
+#X obj 39 136 s \$1-\$3-set;
+#X obj 47 47 print;
+#X connect 0 0 1 0;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
