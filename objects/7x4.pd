@@ -90,15 +90,15 @@
 #X connect 37 0 21 0;
 #X connect 37 0 30 0;
 #X restore 590 77 pd output;
-#X obj 22 22 hradio 14 1 0 7 \$0-1 \$0-1-set empty 0 -8 0 12 -261619
--257983 -162280 4;
-#X obj 22 36 hradio 14 1 0 7 \$0-2 \$0-2-set empty 0 -8 0 10 -261619
+#X obj 20 20 hradio 12 1 0 7 \$0-1 \$0-1-set empty 0 -8 0 12 -261619
+-257983 -162280 6;
+#X obj 20 32 hradio 12 1 0 7 \$0-2 \$0-2-set empty 0 -8 0 10 -261619
 -261619 -162280 2;
-#X obj 22 50 hradio 14 1 0 7 \$0-3 \$0-3-set empty 0 -8 0 10 -261619
+#X obj 20 44 hradio 12 1 0 7 \$0-3 \$0-3-set empty 0 -8 0 10 -261619
 -261619 -162280 6;
 #X obj 181 98 r \$1-\$2-set;
 #X obj 589 128 s \$1-\$2;
-#X obj 22 64 hradio 14 1 0 7 \$0-4 \$0-4-set \$2 75 9 1 14 -261619
+#X obj 20 56 hradio 12 1 0 7 \$0-4 \$0-4-set \$2 65 9 1 14 -261619
 -261619 -162280 1;
 #X floatatom 590 102 5 0 0 0 - - -;
 #X msg 477 60 14 4;
@@ -107,6 +107,7 @@
 #X obj 181 142 clip 0 27;
 #X obj 187 214 div 7;
 #X obj 181 191 % 7;
+#X msg 154 25 size 12;
 #X connect 0 0 20 0;
 #X connect 0 1 19 0;
 #X connect 1 0 3 0;
@@ -123,4 +124,8 @@
 #X connect 18 0 0 0;
 #X connect 19 0 1 0;
 #X connect 20 0 2 0;
-#X coords 0 -1 1 1 102 60 2 20 20;
+#X connect 21 0 8 0;
+#X connect 21 0 9 0;
+#X connect 21 0 10 0;
+#X connect 21 0 13 0;
+#X coords 0 -1 1 1 84 48 2 20 20;

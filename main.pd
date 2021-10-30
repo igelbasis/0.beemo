@@ -1,4 +1,4 @@
-#N canvas 538 59 1046 858 12;
+#N canvas 481 132 1046 858 12;
 #X declare -path ../lib;
 #X declare -path objects;
 #X declare -path cadsr;
@@ -6,7 +6,7 @@
 #X declare -path mod_cartridge;
 #X declare -path ../0.Mixer;
 #X declare -path ../abstractions;
-#N canvas 390 565 218 71 ... 1;
+#N canvas 390 629 218 71 ... 1;
 #N canvas 593 301 358 223 declarations_and_tables 0;
 #X obj 43 36 declare -path ../lib;
 #X obj 43 61 declare -path objects;
@@ -35,7 +35,7 @@
 #X restore 401 23 pd ...;
 #X obj 415 45 bng 32 250 50 0 \$0-init \$0-init-set empty 17 7 0 10
 -262144 -1 -1;
-#X obj 139 374 synth~ \$0 1;
+#X obj 49 387 synth~ \$0 1;
 #X obj 28 44 tgl 32 0 empty \$0-pseudo_toggle-set empty 17 7 0 10 -262144
 -1 -1 0 1;
 #N canvas 316 267 1070 813 pseudo_seq 0;
@@ -65,7 +65,7 @@
 #X msg 427 246 -1 2 7 11 14 18 19;
 #X msg 463 326 -1 2 5 8 11 14 23;
 #X obj 480 64 hradio 15 1 0 6 \$0-progression \$0-progression-set empty
-0 -8 0 10 -262144 -1 -1 4;
+0 -8 0 10 -262144 -1 -1 0;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array \$0-random 6 float 3;
 #A 0 942.857 71.4287 71.4286 385.714 657.143 114.286;
@@ -131,7 +131,7 @@
 #X obj 415 84 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 80 46 hradio 17 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
--1 6;
+-1 7;
 #X floatatom 98 14 5 0 999 1 bpm #0-bpm-set #0-bpm;
 #N canvas 273 269 419 719 bpm.pres 0;
 #X obj 74 26 inlet;
@@ -165,10 +165,10 @@
 #X connect 10 7 9 0;
 #X connect 11 0 1 0;
 #X restore 88 67 pd bpm.pres;
-#X obj 266 665 3x_mixer \$0;
-#X obj 139 489 throw~ \$0-channel_1;
-#X obj 182 175 synth~ \$0 2;
-#X obj 182 290 throw~ \$0-channel_2;
+#X obj 68 202 3x_mixer \$0;
+#X obj 54 502 throw~ \$0-channel_1;
+#X obj 48 529 synth~ \$0 2;
+#X obj 48 644 throw~ \$0-channel_2;
 #X connect 2 0 10 0;
 #X connect 3 0 4 0;
 #X connect 4 0 2 0;
