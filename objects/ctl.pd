@@ -1,4 +1,4 @@
-#N canvas 349 212 894 641 12;
+#N canvas 526 549 894 641 12;
 #N canvas 0 59 377 459 autowrite 0;
 #X obj 98 77 r \$1-\$2;
 #X obj 98 102 t f b;
@@ -74,12 +74,14 @@
 #X obj 165 61 r \$1-msg;
 #X obj 165 86 route \$2;
 #X obj 165 111 s \$1-\$2-set;
-#X obj 390 80 r \$5-msg;
-#X obj 390 105 route synth\$6;
-#X obj 390 130 route \$2;
-#X obj 390 155 s \$1-\$2-set;
+#X obj 390 74 r \$5-msg;
+#X obj 407 111 route synth\$6;
+#X obj 390 200 route \$2;
+#X obj 390 225 s \$1-\$2-set;
+#X obj 407 136 print;
 #X connect 4 0 5 0;
 #X connect 5 0 6 0;
 #X connect 7 0 8 0;
 #X connect 8 0 9 0;
+#X connect 8 0 11 0;
 #X connect 9 0 10 0;
