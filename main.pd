@@ -1,4 +1,4 @@
-#N canvas 965 59 945 784 12;
+#N canvas 1127 144 697 477 12;
 #X declare -path ../lib;
 #X declare -path objects;
 #X declare -path cadsr;
@@ -131,7 +131,7 @@
 #X connect 37 0 30 1;
 #X restore 334 161 pd pseudo_seq;
 #X obj 337 116 hradio 17 1 0 8 empty empty empty 0 -8 0 10 -262144
--1 -1 5;
+-1 -1 6;
 #X floatatom 337 92 5 0 999 1 bpm #0-bpm-set #0-bpm;
 #N canvas 273 269 419 719 bpm.pres 0;
 #X obj 74 26 inlet;
@@ -172,11 +172,11 @@
 #X obj 481 119 r \$0-net_out;
 #X obj 480 161 s \$0-msg;
 #X obj 481 144 print;
-#X obj 483 98 net_in \$0 1235 net_out;
 #X floatatom 428 542 5 0 0 0 - - -;
 #X msg 428 566 0 synth value \$1;
 #X obj 428 591 s \$0-send_data;
 #X obj 149 591 net_out \$0 2358 send_data;
+#X obj 483 98 net_in \$0 12358 net_out;
 #X connect 2 0 9 0;
 #X connect 3 0 4 0;
 #X connect 4 0 2 0;
@@ -186,5 +186,5 @@
 #X connect 10 0 11 0;
 #X connect 12 0 13 0;
 #X connect 12 0 14 0;
+#X connect 15 0 16 0;
 #X connect 16 0 17 0;
-#X connect 17 0 18 0;
