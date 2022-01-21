@@ -1,4 +1,4 @@
-#N canvas 607 32 1199 1149 12;
+#N canvas 431 59 816 463 12;
 #X obj 128 372 +;
 #X obj 129 430 *;
 #X obj 129 455 %;
@@ -9,7 +9,7 @@
 #X obj 318 129 inlet beats;
 #X obj 129 504 outlet;
 #X obj 159 430 f \$1;
-#X obj 184 385 f \$2;
+#X obj 361 307 f \$2;
 #X obj 149 334 f \$3;
 #X obj 492 128 loadbang;
 #X connect 0 0 1 0;
