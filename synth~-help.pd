@@ -1,13 +1,13 @@
-#N canvas 10 69 1910 1011 12;
+#N canvas 10 28 1910 1011 12;
 #X declare -path ../lib;
 #X declare -path objects;
 #X declare -path cadsr;
 #X declare -path ../1.OBJECTS;
-#X obj 354 288 cnv 15 475 220 empty empty empty -10 -22 1 60 -261879
--162280 0;
+#X obj 354 288 cnv 15 475 220 empty empty empty -10 -22 1 60 #fcecd8
+#9c9c9c 0;
 #X obj 359 861 out1~;
-#X obj 131 151 tgl 32 0 empty \$0-pseudo_toggle-set empty 17 7 0 10
--262144 -1 -1 1 1;
+#X obj 131 149 tgl 32 0 empty \$0-pseudo_toggle-set empty 17 7 0 10
+#fcfcfc #000000 #000000 0 1;
 #N canvas 186 59 1070 813 pseudo_seq 0;
 #X obj 102 263 random 8;
 #X obj 102 288 map;
@@ -35,7 +35,7 @@
 #X msg 427 246 -1 2 7 11 14 18 19;
 #X msg 463 326 -1 2 5 8 11 14 23;
 #X obj 480 64 hradio 15 1 0 6 \$0-progression \$0-progression-set empty
-0 -8 0 10 -262144 -1 -1 3;
+0 -8 0 10 #fcfcfc #000000 #000000 0;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array \$0-random 6 float 3;
 #A 0 421.429 350 471.429 314.286 814.286 85.7143;
@@ -47,8 +47,8 @@
 #X obj 332 538 + 1;
 #X obj 332 563 %;
 #X obj 332 588 sel 0;
-#X obj 327 636 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 327 636 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 327 656 array random \$0-random;
 #X obj 327 681 s \$0-progression-set;
 #X connect 0 0 1 0;
@@ -95,7 +95,7 @@
 #X connect 33 0 34 0;
 #X connect 34 0 35 0;
 #X restore 159 213 pd pseudo_seq;
-#X floatatom 203 119 5 0 999 1 bpm #0-bpm-set -;
+#X floatatom 203 119 5 0 999 1 bpm \$0-bpm-set - 0;
 #N canvas 655 451 237 160 ... 0;
 #N canvas 515 469 384 171 declarations_and_tables 0;
 #X obj 43 36 declare -path ../lib;
@@ -126,7 +126,7 @@
 #X connect 4 0 3 0;
 #X restore 258 212 pd ...;
 #X obj 97 151 bng 32 250 50 0 \$0-init \$0-init-set empty 17 7 0 10
--262144 -1 -1;
+#fcfcfc #000000 #000000;
 #N canvas 493 154 450 300 ADSR_display 0;
 #X text 11 41 a2.....attack curve (-1..1);
 #X text 11 26 a1.....attack time (0..4800ms);
@@ -199,17 +199,17 @@ autosave \, change pitch from different tuning tables \, bit depth
 #X text 837 274 __DISTORTION______________________________;
 #X text 831 296 1st Fader(yellow)......ringmodulation frequency (1..8x
 of pitch) \, 2nd Fader.............., f 67;
-#X obj 43 549 cnv 8 15 20 empty \$0-cnv wf 0 15 1 14 -228856 -128992
+#X obj 43 549 cnv 8 15 20 empty \$0-cnv wf 0 15 1 14 #dcdcdc #7c7c7c
 0;
-#X obj 43 572 cnv 8 15 20 empty \$0-cnv tf 0 15 1 14 -228856 -128992
+#X obj 43 572 cnv 8 15 20 empty \$0-cnv tf 0 15 1 14 #dcdcdc #7c7c7c
 0;
-#X obj 43 594 cnv 8 15 20 empty \$0-cnv r1 0 15 1 14 -228856 -128992
+#X obj 43 594 cnv 8 15 20 empty \$0-cnv r1 0 15 1 14 #dcdcdc #7c7c7c
 0;
-#X obj 43 616 cnv 8 15 20 empty \$0-cnv r2 0 15 1 14 -228856 -128992
+#X obj 43 616 cnv 8 15 20 empty \$0-cnv r2 0 15 1 14 #dcdcdc #7c7c7c
 0;
-#X obj 43 638 cnv 8 15 20 empty \$0-cnv oc 0 15 1 14 -228856 -128992
+#X obj 43 638 cnv 8 15 20 empty \$0-cnv oc 0 15 1 14 #dcdcdc #7c7c7c
 0;
-#X obj 43 660 cnv 8 15 20 empty \$0-cnv bc 0 15 1 14 -228856 -128992
+#X obj 43 660 cnv 8 15 20 empty \$0-cnv bc 0 15 1 14 #dcdcdc #7c7c7c
 0;
 #X msg 17 818 vis_size 15 20;
 #X obj 74 890 s \$0-cnv;
@@ -220,9 +220,9 @@ of pitch) \, 2nd Fader.............., f 67;
 #X text 56 622 ...ringmodulation spread;
 #X text 56 644 ...octave control;
 #X text 56 665 ...bitcrush samplerate control;
-#X obj 352 142 cnv 15 230 130 empty empty yay_beemo! -10 -22 1 60 -262130
--162280 0;
-#X obj 359 295 synth~ \$0 1;
+#X obj 352 142 cnv 15 230 130 empty empty yay_beemo! -10 -22 1 60 #fcfcc4
+#9c9c9c 0;
+#X obj 834 604 synth~ \$0 1;
 #X text 358 145 A continous ramp (0..1) reads the index of a [wavetable]
 \, the output then reads the index of the [transferfunction]. You can
 slide through 4 different wavetables and 2 different transferfunctions
