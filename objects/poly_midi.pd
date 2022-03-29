@@ -14,7 +14,6 @@
 #X obj 61 291 - 1;
 #X msg 165 296 0 1;
 #X msg 215 296 1 0;
-#X obj 61 341 print poly;
 #X connect 0 0 1 0;
 #X connect 1 0 11 0;
 #X connect 1 1 13 0;
@@ -24,7 +23,6 @@
 #X connect 2 2 3 2;
 #X connect 3 0 4 0;
 #X connect 3 0 7 0;
-#X connect 3 0 15 0;
 #X connect 4 0 8 0;
 #X connect 5 0 8 0;
 #X connect 6 0 4 1;
